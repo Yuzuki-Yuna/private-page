@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【施術者専用】肩関節周囲炎 4パターン完全マニュアル - Part 2</title>
+    <style>
+        :root {
+            --primary-color: #00695c;
+            --secondary-color: #004d40;
+            --accent-color: #d81b60;
+            --bg-color: #f4f6f8;
+            --text-color: #333;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+            line-height: 1.8; color: var(--text-color); background: var(--bg-color);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px; margin: 0 auto; background: #fff;
+            padding: 40px; box-shadow: 0 0 15px rgba(0,0,0,0.1); border-radius: 8px;
+        }
+        h1 {
+            font-size: 2.4em; border-bottom: 5px solid var(--primary-color);
+            padding-bottom: 20px; margin-bottom: 30px; color: var(--secondary-color);
+            text-align: center;
+        }
+        .subtitle {
+            text-align: center; font-size: 1.1em; color: #666;
+            margin-bottom: 40px; font-weight: normal;
+        }
+        h2 {
+            font-size: 1.9em; background: var(--primary-color); color: #fff;
+            padding: 18px 25px; border-radius: 5px; margin: 50px 0 25px 0;
+        }
+        h3 {
+            font-size: 1.5em; border-left: 8px solid var(--accent-color);
+            padding-left: 15px; margin: 35px 0 20px 0; background: #fce4ec;
+            padding: 12px 15px; color: #880e4f;
+        }
+        h4 {
+            font-size: 1.3em; color: var(--secondary-color); margin: 25px 0 12px 0;
+            font-weight: bold; border-bottom: 2px dashed #999; 
+            display: inline-block; padding-bottom: 5px;
+        }
+        h5 {
+            font-size: 1.15em; color: #555; margin: 20px 0 10px 0;
+            font-weight: bold;
+        }
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-left: 30px; margin-bottom: 20px; }
+        li { margin-bottom: 10px; line-height: 1.7; }
+        strong { color: #c62828; }
+        em { color: #1565c0; font-style: normal; font-weight: 600; }
+
+        .pattern-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; padding: 25px; border-radius: 8px;
+            margin: 40px 0 30px 0; box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .pattern-header h2 {
+            background: transparent; padding: 0; margin: 0;
+            font-size: 2em; border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px; margin-bottom: 10px;
+        }
+        .pattern-severity {
+            display: inline-block; background: rgba(255,255,255,0.2);
+            padding: 5px 15px; border-radius: 20px; font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .assessment-box {
+            background: #e3f2fd; border: 3px solid #1976d2;
+            padding: 25px; margin: 25px 0; border-radius: 8px;
+        }
+        .assessment-title {
+            font-size: 1.3em; font-weight: bold; color: #0d47a1;
+            margin-bottom: 15px; border-bottom: 2px solid #1976d2;
+            padding-bottom: 8px;
+        }
+
+        .tech-box {
+            border: 2px solid #b2dfdb; background: #e0f2f1;
+            padding: 25px; margin: 25px 0; border-radius: 5px;
+        }
+        .tech-title {
+            font-weight: bold; color: #00695c; font-size: 1.2em;
+            display: block; margin-bottom: 12px; 
+            border-bottom: 2px solid #00897b; padding-bottom: 5px;
+        }
+        
+        .pain-management {
+            background: #fff3e0; border-left: 6px solid #ff9800;
+            padding: 20px; margin: 20px 0; border-radius: 0 5px 5px 0;
+        }
+        .contraindication {
+            background: #ffebee; border: 2px solid #ef5350;
+            padding: 20px; margin: 20px 0; color: #c62828; 
+            font-weight: bold; border-radius: 5px;
+        }
+        .warning-box {
+            background: #fff9c4; border-left: 6px solid #fbc02d;
+            padding: 20px; margin: 20px 0;
+        }
+
+        .mechanism-box {
+            background: #f3e5f5; border: 2px solid #9c27b0;
+            padding: 25px; margin: 25px 0; border-radius: 5px;
+        }
+        .mechanism-title {
+            font-weight: bold; color: #6a1b9a; font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        table { 
+            width: 100%; border-collapse: collapse; 
+            margin: 25px 0; font-size: 0.95em;
+        }
+        th { 
+            background: #546e7a; color: #fff; padding: 15px; 
+            border: 1px solid #37474f; font-weight: bold;
+        }
+        td { 
+            border: 1px solid #cfd8dc; padding: 15px; 
+            vertical-align: top; background: white;
+        }
+        tr:nth-child(even) td { background: #eceff1; }
+
+        .tag {
+            display: inline-block; padding: 4px 10px; border-radius: 3px; 
+            font-size: 0.85em; margin-right: 8px; color: white;
+            font-weight: 600;
+        }
+        .tag-mobilization { background: #1976d2; }
+        .tag-softtissue { background: #388e3c; }
+        .tag-stretching { background: #f57c00; }
+        .tag-assessment { background: #7b1fa2; }
+        .tag-severe { background: #c62828; }
+
+        .step-number {
+            display: inline-block; background: var(--accent-color);
+            color: white; width: 35px; height: 35px; border-radius: 50%;
+            text-align: center; line-height: 35px; font-weight: bold;
+            margin-right: 10px; font-size: 1.1em;
+        }
+
+        .checklist {
+            background: #f5f5f5; padding: 20px;
+            border-left: 5px solid #4caf50; margin: 20px 0;
+        }
+        .checklist-item {
+            margin: 10px 0; padding-left: 30px;
+            position: relative;
+        }
+        .checklist-item:before {
+            content: "✓"; position: absolute; left: 0;
+            color: #4caf50; font-weight: bold; font-size: 1.3em;
+        }
+
+        .highlight {
+            background: linear-gradient(transparent 60%, #ffeb3b 60%);
+            font-weight: bold;
+        }
+
+        .nav-link {
+            display: inline-block; background: #1976d2; color: white;
+            padding: 12px 25px; border-radius: 5px; text-decoration: none;
+            margin: 20px 10px; font-weight: bold;
+        }
+        .nav-link:hover {
+            background: #0d47a1;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>🔧 肩関節周囲炎（Frozen Shoulder）<br>4パターン完全臨床マニュアル<br><small style="font-size:0.6em;">Part 2: パターンC・D</small></h1>
+    <p class="subtitle">拘縮部位別アプローチ・鑑別診断から実践手技まで</p>
+
+    <div style="text-align: center; margin: 30px 0;">
+        <a href="frozen_shoulder_manual_part1.html" class="nav-link">← Part 1へ戻る</a>
+        <a href="#pattern-c" class="nav-link">パターンC: 下方拘縮</a>
+        <a href="#pattern-d" class="nav-link">パターンD: 全方向拘縮</a>
+    </div>
+
+    <!-- パターンC -->
+    <div id="pattern-c" class="pattern-header" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+        <h2>パターンC：下方拘縮優位型</h2>
+        <div class="pattern-severity">重症度：中〜高 | 施術時間：60-70分</div>
+        <p style="margin-top: 15px; font-size: 0.95em;">長期間の三角巾固定後、腕を下げたまま過ごす習慣がある患者に多い。下方関節包・腋窩陥凹部の拘縮により挙上が著しく制限される。</p>
+    </div>
+
+    <h3>🔬 病態メカニズム：なぜ下方が拘縮するのか</h3>
+    <div class="mechanism-box">
+        <div class="mechanism-title">【長期固定による下方組織の短縮】</div>
+        <p>骨折・脱臼後の三角巾固定、または腱板損傷後の安静により、腕を下垂位（体側につけた状態）で数週間〜数ヶ月過ごすと、<strong>下方関節包</strong>と<strong>腋窩陥凹部（脇の下の袋状の組織）</strong>が短縮します。</p>
+        <p>通常、腕を上げる際には下方関節包が伸張されますが、固定期間中は一度も伸張されないため、組織は「この長さで良い」と認識し、コラーゲン線維が短縮位で再構築されてしまいます。</p>
+        
+        <div class="mechanism-title" style="margin-top: 20px;">【恐怖回避行動による悪循環】</div>
+        <p>固定解除後も、「腕を上げると痛い」という恐怖から、患者は腕を下げたまま過ごします。これにより下方関節包の短縮がさらに進行し、<strong class="highlight">廃用性拘縮</strong>の悪循環に陥ります。</p>
+        
+        <div class="mechanism-title" style="margin-top: 20px;">【肩峰下インピンジメントの発生】</div>
+        <p>下方関節包が拘縮すると、腕を上げる際に上腕骨頭が下方に滑り降りることができず、上方へ押し上げられます。これにより肩峰（肩の骨の出っ張り）と上腕骨頭が衝突（インピンジメント）し、激痛が走ります。</p>
+        <p>この痛みがさらに恐怖回避行動を強化し、拘縮が進行する悪循環となります。</p>
+    </div>
+
+    <h3>🎯 鑑別診断：パターンCの確実な見分け方</h3>
+    <div class="assessment-box">
+        <div class="assessment-title"><span class="tag tag-assessment">視診</span> 見た目で確認できるサイン</div>
+        
+        <h5>1. 立位姿勢観察</h5>
+        <div class="checklist">
+            <div class="checklist-item"><strong>肩の下垂</strong>：患側の肩が健側より下がって見える（僧帽筋上部の弛緩）</div>
+            <div class="checklist-item"><strong>腕の固定</strong>：腕を体側にぴったりつけて歩く。腕の振りがほとんどない</div>
+            <div class="checklist-item"><strong>腋窩の狭小化</strong>：脇の下（腋窩）が狭く見える。腋窩陥凹部の癒着により</div>
+        </div>
+
+        <h5>2. 動作観察（最重要）</h5>
+        <div class="checklist">
+            <div class="checklist-item"><strong>挙上の著しい制限</strong>：腕を前方または側方から上げる動作が90度未満で止まる</div>
+            <div class="checklist-item"><strong>肩全体が上がる代償動作</strong>：腕を上げようとすると、上腕骨ではなく肩甲骨全体（僧帽筋の収縮）が上がる。これを<em>肩すくめ動作</em>と呼ぶ</div>
+            <div class="checklist-item"><strong>体幹側屈の代償</strong>：腕を上げる際に、体を反対側に傾けて代償する</div>
+        </div>
+
+        <div class="assessment-title" style="margin-top: 25px;"><span class="tag tag-assessment">触診</span> 手で触って確認する拘縮</div>
+        
+        <h5>1. 腋窩陥凹部の触診（最重要）</h5>
+        <ol>
+            <li>クライアント座位、腕をリラックスさせる</li>
+            <li>施術者は患側の脇の下に指を入れる</li>
+            <li><strong>パターンCの特徴：</strong>
+                <ul>
+                    <li>通常、脇の下はふんわりとした空間があるが、パターンCでは<strong>空間が消失</strong>している</li>
+                    <li>指を深く入れようとすると、硬い組織に阻まれる</li>
+                    <li>腋窩陥凹部（関節包の下部が袋状になっている部分）が癒着し、板状に硬くなっている</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h5>2. 下方関節包の触診</h5>
+        <ol>
+            <li>クライアント座位、腕を軽く外転させる</li>
+            <li>施術者は上腕骨頭の下方に指を当てる</li>
+            <li><strong>パターンCの特徴：</strong>関節包が厚く硬い。健側と比較すると明らかに硬い</li>
+        </ol>
+
+        <div class="assessment-title" style="margin-top: 25px;"><span class="tag tag-assessment">徒手検査</span> 可動域テスト</div>
+
+        <h5>1. 他動挙上テスト（最も重要）</h5>
+        <div class="tech-box" style="background: #fff3e0; border-color: #ff9800;">
+            <p><strong>実施方法：</strong></p>
+            <ol>
+                <li>クライアント座位または仰臥位</li>
+                <li>施術者は一方の手で肩甲骨を固定（肩甲骨が動かないように上から押さえる）</li>
+                <li>もう一方の手でクライアントの肘を支え、ゆっくりと前方挙上させる</li>
+                <li>健側も同様に行い、比較</li>
+            </ol>
+            <p><strong>パターンCの陽性所見：</strong></p>
+            <ul>
+                <li>他動挙上が<strong>90度未満</strong>で硬い終末感（健側は通常180度）</li>
+                <li>60-90度付近で、上腕骨頭が肩峰に突き上げられる感覚（インピンジメント）</li>
+                <li>肩甲骨を固定すると、さらに制限が顕著になる（肩甲上腕リズムの破綻）</li>
+            </ul>
+        </div>
+
+        <h5>2. Neerインピンジメントテスト</h5>
+        <ol>
+            <li>施術者が一方の手で肩甲骨を固定</li>
+            <li>もう一方の手でクライアントの腕を強制的に前方挙上</li>
+            <li><strong>陽性所見</strong>：90度付近で激痛。肩峰下でのインピンジメント</li>
+        </ol>
+
+        <h5>3. Sulcus Sign（サルカスサイン）</h5>
+        <ol>
+            <li>クライアント座位、腕をリラックスさせる</li>
+            <li>施術者がクライアントの腕を下方に軽く牽引</li>
+            <li><strong>陽性所見</strong>：肩峰と上腕骨頭の間に溝（sulcus）ができる。下方関節包の弛緩を示唆</li>
+            <li><strong>注意：</strong>パターンCでは通常<strong>陰性</strong>（溝ができない）。下方関節包が拘縮しているため</li>
+        </ol>
+    </div>
+
+    <h3>📋 医学的に関与する組織の詳細</h3>
+    <table>
+        <tr>
+            <th style="width: 15%;">組織名</th>
+            <th style="width: 25%;">解剖学的位置</th>
+            <th style="width: 30%;">パターンCでの状態</th>
+            <th style="width: 30%;">触診所見</th>
+        </tr>
+        <tr>
+            <td><strong>下方関節包</strong><br><span class="tag tag-severe">最重要</span></td>
+            <td>肩甲上腕関節の下方を覆う線維性組織。腕を下ろした状態では弛緩し、挙上時に伸張される。</td>
+            <td>長期下垂位により短縮。線維化・肥厚が顕著。挙上時に伸張されず、物理的に挙上をブロックする。</td>
+            <td>・上腕骨頭下方に厚く硬い組織<br>・弾力性が完全に失われている<br>・健側と比較すると厚みが2-3倍<br>・圧迫で肩下方への鈍痛</td>
+        </tr>
+        <tr>
+            <td><strong>腋窩陥凹部<br>(Axillary Pouch)</strong></td>
+            <td>下方関節包の一部で、腕を下ろした時に袋状になる部分。通常は伸縮性が高い。</td>
+            <td>最も拘縮しやすい部位。癒着により袋状の空間が消失。挙上制限の主因。</td>
+            <td>・脇の下の空間が狭い<br>・指を深く入れると硬い組織<br>・板状に癒着している<br>・圧痛は中程度</td>
+        </tr>
+        <tr>
+            <td><strong>大胸筋下部線維</strong><br>（二次的影響）</td>
+            <td><strong>起始：</strong>第6-7肋骨<br><strong>停止：</strong>上腕骨大結節稜<br><strong>作用：</strong>肩関節の内転</td>
+            <td>腕を下げたまま過ごすことで、大胸筋下部線維も短縮。挙上時に上腕骨を下方に引っ張る。</td>
+            <td>・胸の下部に緊張<br>・圧痛は軽度<br>・ストレッチで伸張感が強い</td>
+        </tr>
+        <tr>
+            <td><strong>広背筋</strong><br>（二次的影響）</td>
+            <td><strong>起始：</strong>第7胸椎〜第5腰椎、仙骨<br><strong>停止：</strong>上腕骨小結節稜<br><strong>作用：</strong>肩関節の内転・伸展</td>
+            <td>大胸筋と同様、腕の下垂により短縮。挙上時に上腕骨を下方・後方に引っ張る。</td>
+            <td>・脇腹から腰にかけて緊張<br>・圧痛は中程度<br>・挙上時に明確な制限感</td>
+        </tr>
+    </table>
+
+    <h3>🔧 具体的な施術方法（ステップバイステップ）</h3>
+    <div class="pain-management">
+        <strong>施術の全体方針</strong><br>
+        パターンCでは、<strong>下方関節包と腋窩陥凹部の癒着剥離</strong>が最優先です。この領域はアクセスが困難で、技術的難易度が高いため、段階的に慎重にアプローチします。また、インピンジメント予防のため、肩甲骨周囲筋のバランス調整も重要です。<br><br>
+        <strong>推奨施術時間：</strong>60-70分<br>
+        <strong>体位変換：</strong>座位 → 仰臥位 → 側臥位
+    </div>
+
+    <h4><span class="step-number">1</span>温熱療法（10分）</h4>
+    <p>クライアント座位。肩全体（特に腋窩周囲）にホットパック15分。腋窩陥凹部は深層にあるため、超音波療法（1MHz / 連続モード / 1.0W/cm²）を併用すると効果的。照射部位：腋窩前方・下方・後方の3箇所、各3-5分。</p>
+
+    <h4><span class="step-number">2</span>肩甲骨周囲筋の準備リリース（10分）</h4>
+    
+    <div class="tech-box">
+        <span class="tech-title"><span class="tag tag-softtissue">準備</span> 僧帽筋・菱形筋・前鋸筋のリリース</span>
+        
+        <p><strong>目的：</strong>肩甲骨の可動性を改善し、肩甲上腕リズムを正常化。下方関節包の施術前に、肩甲骨が自由に動ける状態を作る。</p>
+        
+        <p><strong>体位：</strong>座位または腹臥位</p>
+        
+        <h5>手順：</h5>
+        <ol>
+            <li><strong>僧帽筋（3分）：</strong>首の付け根から肩甲骨上角まで、軽擦→揉捏。圧は5-6/10</li>
+            <li><strong>菱形筋（3分）：</strong>肩甲骨の内側縁を親指で押圧。圧は6-7/10</li>
+            <li><strong>前鋸筋（4分）：</strong>側臥位で、肩甲骨外側縁の深層にある前鋸筋をリリース。圧は5-6/10</li>
+        </ol>
+    </div>
+
+    <h4><span class="step-number">3</span>腋窩陥凹部の癒着剥離（15分）</h4>
+
+    <div class="contraindication">
+        ⚠️ 重要な注意：腋窩には腋窩神経、腋窩動脈・静脈、リンパ節が密集しています。圧が強すぎると神経損傷、血管損傷、リンパ浮腫のリスクがあります。必ず軽圧から始め、クライアントの反応を常に確認してください。
+    </div>
+
+    <div class="tech-box">
+        <span class="tech-title"><span class="tag tag-softtissue">最重要</span> 腋窩陥凹部の段階的リリース</span>
+        
+        <p><strong>体位：</strong>仰臥位、腕を軽く外転（45-60度）、肘は軽く屈曲</p>
+        
+        <h5>手順：</h5>
+        <ol>
+            <li><strong>腋窩の開放（3分）：</strong>
+                <ul>
+                    <li>クライアントの腕を支え、腋窩を開く</li>
+                    <li>施術者は患側の脇の下に指（人差し指・中指・薬指の3本）を優しく入れる</li>
+                    <li>圧は<strong>3-4/10</strong>の非常に軽い圧から開始</li>
+                    <li>クライアントに「痛いですか？しびれはありますか？」と確認</li>
+                </ul>
+            </li>
+            
+            <li><strong>癒着部位の特定（2分）：</strong>
+                <ul>
+                    <li>腋窩内を指で触診し、硬く板状になっている部位を探す</li>
+                    <li>典型的な位置：腋窩の<em>下方</em>および<em>前下方</em></li>
+                    <li>この部位が腋窩陥凹部の癒着部</li>
+                </ul>
+            </li>
+            
+            <li><strong>軽圧でのリリース（5分）：</strong>
+                <ul>
+                    <li>特定した癒着部位に、<strong>4-5/10の圧</strong>でゆっくりと圧を加える</li>
+                    <li>圧の方向：肩甲骨に向かって（内側方向）。決して外側（腋窩神経・血管方向）ではない</li>
+                    <li>持続圧を30-45秒加え、組織が緩むのを待つ</li>
+                    <li>クライアントに深呼吸を促し、吐く息で圧を深める</li>
+                    <li>2-3箇所の癒着部位に順番にアプローチ</li>
+                </ul>
+            </li>
+            
+            <li><strong>腕の他動運動との統合（5分）：</strong>
+                <ul>
+                    <li>腋窩陥凹部を圧迫したまま、もう一方の手でクライアントの肘を支える</li>
+                    <li>ゆっくりと腕を挙上させる（前方挙上または側方挙上）</li>
+                    <li>圧迫により癒着が剥がれるタイミングで、可動域が急に広がることがある</li>
+                    <li>痛みが出る手前で止め、そのまま10-15秒保持</li>
+                    <li>これを3-4回繰り返す</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <p><strong>成功の指標：</strong></p>
+        <ul>
+            <li>施術前より腋窩の空間が広がる</li>
+            <li>板状の硬結が柔らかくなる</li>
+            <li>他動挙上が10-20度改善</li>
+        </ul>
+    </div>
+
+    <h4><span class="step-number">4</span>下方関節包のストレッチ（15分）</h4>
+
+    <div class="tech-box">
+        <span class="tech-title"><span class="tag tag-mobilization">Grade III</span> 下方滑り（Inferior Glide）with Oscillation</span>
+        
+        <p><strong>目的：</strong>下方関節包を機械的に伸張。挙上可動域を改善し、インピンジメントを軽減。</p>
+        
+        <p><strong>体位：</strong>仰臥位、肩甲骨の下にタオルを入れて固定</p>
+        
+        <h5>手順：</h5>
+        <ol>
+            <li><strong>開始肢位の設定：</strong>
+                <ul>
+                    <li>クライアントの腕を可能な範囲で外転（通常60-90度）</li>
+                    <li>肘は伸展位</li>
+                </ul>
+            </li>
+            
+            <li><strong>グリップ：</strong>
+                <ul>
+                    <li>施術者は体幹側に立つ</li>
+                    <li>ウェッブスペース（親指と人差し指の間）を上腕骨骨頭の直下に当てる</li>
+                    <li>もう一方の手で肘を支える</li>
+                </ul>
+            </li>
+            
+            <li><strong>下方滑り（10分）：</strong>
+                <ul>
+                    <li><strong>圧の方向：</strong>患者の足方向（尾側）へ向けて、上腕骨頭を押し下げる</li>
+                    <li><strong>圧の強さ：</strong>6-7/10</li>
+                    <li><strong>リズム：</strong>持続圧（30秒）と振動（オシレーション）を組み合わせる
+                        <ul>
+                            <li>30秒持続圧を加える</li>
+                            <li>その後、小刻みに上下に振動させる（振幅1-2cm、頻度2-3Hz）を10-15回</li>
+                            <li>10秒休憩</li>
+                            <li>これを5-6回繰り返す</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            
+            <li><strong>漸進的外転角度の増加：</strong>
+                <ul>
+                    <li>最初は60度外転位で下方滑り</li>
+                    <li>次に75度外転位で下方滑り</li>
+                    <li>最後に90度外転位（可能であれば）で下方滑り</li>
+                    <li>外転角度を増やすごとに、下方関節包がより効果的に伸張される</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <p><strong>重要なポイント：</strong></p>
+        <p>単に腕を下に引っ張るのではなく、<strong>上腕骨頭だけを下方に滑らせる</strong>イメージで行うことが重要です。肩甲骨は固定したまま、骨頭のみを動かします。</p>
+    </div>
+
+    <h4><span class="step-number">5</span>大胸筋・広背筋のストレッチ（10分）</h4>
+
+    <div class="tech-box">
+        <span class="tech-title"><span class="tag tag-stretching">補助</span> 挙上制限筋のリリース</span>
+        
+        <h5>大胸筋下部線維のストレッチ（5分）：</h5>
+        <ol>
+            <li>クライアント仰臥位</li>
+            <li>施術者はクライアントの腕を外転・外旋させる</li>
+            <li>肘を支えながら、ゆっくりと後方へ倒す（水平伸展）</li>
+            <li>大胸筋が伸びるのを感じる位置で30秒保持</li>
+            <li>3-4回繰り返す</li>
+        </ol>
+        
+        <h5>広背筋のストレッチ（5分）：</h5>
+        <ol>
+            <li>クライアント座位</li>
+            <li>両手を頭の上で組ませる</li>
+            <li>施術者が後ろから両肘を支え、上方へ持ち上げる</li>
+            <li>広背筋が伸びるのを感じる位置で30秒保持</li>
+            <li>3-4回繰り返す</li>
+        </ol>
+    </div>
+
+    <h4><span class="step-number">6</span>自動介助運動（5分）</h4>
+
+    <div class="tech-box">
+        <span class="tech-title"><span class="tag tag-stretching">最終</span> Pulley Exercise（滑車運動）の模擬</span>
+        
+        <p><strong>目的：</strong>新たに獲得した可動域を、クライアント自身の力で確認。神経筋再教育。</p>
+        
+        <h5>手順：</h5>
+        <ol>
+            <li>クライアント座位</li>
+            <li>健側の手で患側の手首を持つ</li>
+            <li>健側の力で患側の腕をゆっくりと前方挙上</li>
+            <li>施術前より挙がることを確認し、クライアントに実感してもらう</li>
+            <li>10回 × 2セット</li>
+        </ol>
+    </div>
+
+    <h3>🏠 ホームケア指導（パターンC専用）</h3>
+    
+    <div class="tech-box">
+        <span class="tech-title">毎日行うセルフエクササイズ（朝晩2回）</span>
+        
+        <h5>1. 壁登り運動（Wall Walking）</h5>
+        <ol>
+            <li>壁の前に立つ（約30cm離れる）</li>
+            <li>患側の指先を壁につける</li>
+            <li>指で壁を登るように、少しずつ腕を上げていく</li>
+            <li>痛みが出る手前まで上げたら、そのまま10秒保持</li>
+            <li>ゆっくり降ろす</li>
+            <li>10回 × 3セット</li>
+        </ol>
+        
+        <h5>2. テーブルスライド（Table Slide）</h5>
+        <ol>
+            <li>テーブルの前に座る</li>
+            <li>テーブルの上にタオルを置く</li>
+            <li>両手をタオルの上に乗せる</li>
+            <li>お辞儀をするように体を前に倒しながら、タオルを前方へ滑らせる</li>
+            <li>脇が伸びる位置で10秒保持</li>
+            <li>10回 × 2セット</li>
+        </ol>
+        
+        <h5>3. ゴムバンド・エクササイズ（挙上筋強化）</h5>
+        <p><strong>重要：</strong>パターンCでは、拘縮の改善だけでなく、挙上筋（前鋸筋、僧帽筋下部）の強化も必要です。</p>
+        <ol>
+            <li>ゴムバンド（セラバンド等）を用意</li>
+            <li>立位で、ゴムバンドを足で踏む</li>
+            <li>両端を持ち、腕を前方挙上</li>
+            <li>ゆっくり10回 × 3セット</li>
+        </ol>
+    </div>
+
+    <div class="warning-box">
+        <strong>恐怖回避行動の克服（最重要）</strong><br>
+        パターンCの最大の問題は、「腕を上げると痛い」という恐怖から、腕を使わなくなることです。施術により可動域が改善しても、恐怖が残っていると再び拘縮します。<br><br>
+        <strong>指導のポイント：</strong>
+        <ul style="margin-top: 10px;">
+            <li>「痛みが出る手前まで」腕を動かすことは<strong>安全</strong>であり、<strong>必要</strong>であることを説明</li>
+            <li>日常生活で意識的に腕を使う習慣をつける（例：高い棚から物を取る、洗濯物を干す等）</li>
+            <li>「使わないと固まる」という廃用性拘縮のメカニズムを説明</li>
+        </ul>
+    </div>
+
+    <h3>⚠️ 禁忌事項・医療機関紹介基準（パターンC）</h3>
+    
+    <div class="contraindication">
+        <strong>パターンC特有の注意点：</strong>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+            <li>腱板断裂との鑑別が重要。Drop Arm Test陽性、夜間痛激烈な場合は、MRI検査を推奨</li>
+            <li>リンパ浮腫の既往（乳がん手術後等）がある場合、腋窩への施術は禁忌</li>
+            <li>腋窩リンパ節腫脹がある場合、感染症・悪性腫瘍の可能性があり、医療機関へ即座に紹介</li>
+        </ul>
+    </div>
+
+    <!-- パターンD -->
+    <div id="pattern-d" class="pattern-header" style="background: linear-gradient(135deg, #ee0979 0%, #ff6a00 100%);">
+        <h2>パターンD：全方向拘縮型（最重症）</h2>
+        <div class="pattern-severity">重症度：最高 | 施術時間：75-90分</div>
+        <p style="margin-top: 15px; font-size: 0.95em;">関節包全体が線維化し、すべての方向で可動域が制限される。パターンA・B・Cの要素がすべて混在。糖尿病合併例、長期放置例に多い。「真の五十肩」。</p>
+    </div>
+
+    <h3>🔬 病態メカニズム：なぜ全方向が拘縮するのか</h3>
+    <div class="mechanism-box">
+        <div class="mechanism-title">【関節包全体の線維化カスケード】</div>
+        <p>パターンDは、パターンA・B・Cのいずれかから始まり、放置または不適切な管理により全方向に波及したケースが多いです。</p>
+        <p>例：前方拘縮（パターンA）で始まる → 痛みで腕を動かさなくなる → 下方も拘縮（パターンC要素追加）→ 代償動作で後方も緊張（パターンB要素追加）→ 全方向拘縮</p>
+        
+        <div class="mechanism-title" style="margin-top: 20px;">【糖尿病との関連（重要）】</div>
+        <p>糖尿病患者では、健常者の<strong>5倍</strong>の頻度で肩関節周囲炎が発症します。高血糖により<em>AGEs（Advanced Glycation End Products：終末糖化産物）</em>が関節包に蓄積し、コラーゲン線維の架橋を異常に促進。結果、関節包全体が硬く縮んだ状態になります。</p>
+        <p>糖尿病合併例では、通常の肩関節周囲炎より<strong>2-3倍長く</strong>症状が持続し（平均30ヶ月 vs 15ヶ月）、改善も遅いです。</p>
+        
+        <div class="mechanism-title" style="margin-top: 20px;">【炎症の持続化】</div>
+        <p>パターンDでは、拘縮だけでなく、関節包内の<em>慢性炎症</em>も持続していることが多いです。滑膜の増生、血管新生、炎症性サイトカイン（IL-1β、TNF-α）の産生が続き、痛みと拘縮の悪循環を形成します。</p>
+    </div>
+
+    <h3>🎯 鑑別診断：パターンDの確実な見分け方</h3>
+    <div class="assessment-box">
+        <div class="assessment-title"><span class="tag tag-assessment">病歴聴取</span> 重要な情報</div>
+        
+        <div class="checklist">
+            <div class="checklist-item"><strong>症状の持続期間：</strong>6ヶ月以上続いている（通常の肩関節周囲炎は15-18ヶ月で自然寛解することが多い）</div>
+            <div class="checklist-item"><strong>糖尿病の既往：</strong>糖尿病があるか、血糖値が高いと言われたことがあるか</div>
+            <div class="checklist-item"><strong>夜間痛：</strong>夜間に激痛で目が覚める。睡眠が著しく障害される</div>
+            <div class="checklist-item"><strong>ADL（日常生活動作）の著しい制限：</strong>衣服の着脱、入浴、整髪など、ほぼすべての動作が困難</div>
+        </div>
+
+        <div class="assessment-title" style="margin-top: 25px;"><span class="tag tag-assessment">徒手検査</span> 全方向の可動域制限</div>
+
+        <h5>Capsular Pattern（関節包パターン）の確認</h5>
+        <p>肩関節周囲炎では、特定の順序で可動域制限が現れます。これを<strong>Capsular Pattern</strong>と呼びます。</p>
+        
+        <div class="tech-box" style="background: #fff3e0; border-color: #ff9800;">
+            <p><strong>肩関節のCapsular Pattern：</strong></p>
+            <p><strong>外旋 > 外転 > 内旋</strong> の順で制限される</p>
+            
+            <p><strong>測定方法：</strong></p>
+            <ol>
+                <li><strong>他動外旋：</strong>仰臥位、肘90度屈曲。健側 vs 患側<br>
+                    パターンDでは：患側が<strong>20度未満</strong>（健側は通常70-90度）</li>
+                <li><strong>他動外転：</strong>仰臥位または座位。肩甲骨固定して測定<br>
+                    パターンDでは：患側が<strong>60度未満</strong>（健側は通常180度）</li>
+                <li><strong>他動内旋：</strong>腹臥位、肘90度屈曲<br>
+                    パターンDでは：患側が<strong>30度未満</strong>（健側は通常70-90度）</li>
+            </ol>
+            
+            <p><strong>パターンDの診断基準：</strong></p>
+            <ul>
+                <li>外旋、外転、内旋の<strong>すべて</strong>が健側の50%以下に制限</li>
+                <li>かつ、制限の程度が <strong>外旋 > 外転 > 内旋</strong> の順</li>
+            </ul>
+        </div>
+
+        <h5>End Feel（終末感）の評価</h5>
+        <p>各方向の可動域の最終点で、どのような感触があるかを評価します。</p>
+        <ul>
+            <li><strong>パターンDの特徴：</strong>すべての方向で<em>硬い終末感（Firm / Hard End Feel）</em>。まるで骨にぶつかるような、まったく遊びのない硬い感触。</li>
+            <li><strong>健常肩：</strong>軟らかい終末感（Soft End Feel）または弾力的終末感（Elastic End Feel）</li>
+        </ul>
+    </div>
+
+    <h3>📋 医学的に関与する組織（全方向）</h3>
+    <table>
+        <tr>
+            <th style="width: 15%;">組織</th>
+            <th style="width: 35%;">パターンDでの状態</th>
+            <th style="width: 50%;">触診・検査所見</th>
+        </tr>
+        <tr>
+            <td><strong>関節包全体</strong></td>
+            <td>前方・後方・下方のすべての部分が線維化・肥厚。関節包容積が正常の50-70%に減少。</td>
+            <td>・どの部位を触診しても硬く肥厚<br>・弾力性が完全に失われている<br>・関節造影では関節包容積の著明な減少</td>
+        </tr>
+        <tr>
+            <td><strong>肩甲下筋</strong><br><strong>棘下筋・小円筋</strong></td>
+            <td>回旋筋腱板（ローテーターカフ）全体が短縮・硬化。廃用性萎縮も併発していることが多い。</td>
+            <td>・すべての回旋筋に硬結<br>・長期例では筋萎縮が顕著<br>・圧痛が広範囲</td>
+        </tr>
+        <tr>
+            <td><strong>烏口上腕靭帯</strong><br><strong>上・中・下関節上腕靭帯</strong></td>
+            <td>すべての靭帯が肥厚・短縮。特に烏口上腕靭帯（CHL）と中関節上腕靭帯（MGHL）の拘縮が顕著。</td>
+            <td>・烏口突起周辺がガチガチに硬い<br>・靭帯の太さが正常の2-3倍<br>・横断摩擦で激痛</td>
+        </tr>
+        <tr>
+            <td><strong>腋窩陥凹部</strong></td>
+            <td>完全に癒着し、袋状の空間が消失。触診不可能なほど硬い。</td>
+            <td>・腋窩の空間が完全に消失<br>・指が全く入らない<br>・板状に硬く癒着</td>
+        </tr>
+    </table>
+
+    <h3>🔧 具体的な施術方法（ステップバイステップ）</h3>
+    <div class="pain-management">
+        <strong>施術の全体方針</strong><br>
+        パターンDは最重症のため、<strong>1回の施術で劇的な改善は期待できません</strong>。長期戦を覚悟し、「優しく、じっくり、継続的に」が原則です。<br><br>
+        <strong>最重要ポイント：</strong>
+        <ul style="margin-top: 10px;">
+            <li>強い刺激は絶対に禁物。防御性筋収縮を引き起こし、逆効果</li>
+            <li>温熱療法と軽圧マッサージを重視</li>
+            <li>週2-3回 × 3-6ヶ月の長期計画</li>
+            <li>糖尿病合併例では、血糖コントロールの改善が必須（内科医と連携）</li>
+        </ul>
+        <strong>推奨施術時間：</strong>75-90分<br>
+        <strong>体位変換：</strong>仰臥位 → 側臥位 → 腹臥位 → 座位
+    </div>
+
+    <h4><span class="step-number">1</span>温熱療法（最重要・20分）</h4>
+
+    <div class="tech-box">
+        <span class="tech-title">深部温熱療法の徹底</span>
+        
+        <p><strong>目的：</strong>線維化した組織の粘弾性を高める。疼痛閾値を上げる。炎症性サイトカインの代謝を促進。</p>
+        
+        <h5>実施方法：</h5>
+        <ol>
+            <li><strong>ホットパック（15分）：</strong>
+                <ul>
+                    <li>肩全体（前方・後方・上方・腋窩）を覆うように当てる</li>
+                    <li>温度：40-45度</li>
+                    <li>低温やけど防止のため、必ずタオルを挟む</li>
+                </ul>
+            </li>
+            
+            <li><strong>超音波療法（10分）：</strong>
+                <ul>
+                    <li>パラメータ：1MHz / 連続モード / 1.0-1.5W/cm²</li>
+                    <li>照射部位：
+                        <ul>
+                            <li>肩甲下筋（腋窩前方）：3分</li>
+                            <li>烏口上腕靭帯（烏口突起周辺）：2分</li>
+                            <li>棘下筋（肩甲棘下）：3分</li>
+                            <li>下方関節包（腋窩下方）：2分</li>
+                        </ul>
+                    </li>
+                    <li>効果：表層のホットパックでは届かない深部組織（関節包、靭帯）を直接温められる</li>
+                </ul>
+            </li>
+        </ol>
+        
+        <p><strong>注意：</strong>超音波療法が利用できない場合は、ホットパックを20分に延長し、可能な限り深部まで温めます。</p>
+    </div>
+
+    <h4><span class="step-number">2</span>全身リラクゼーション（15分）</h4>
+
+    <div class="tech-box">
+        <span class="tech-title"><span class="tag tag-softtissue">準備</span> 超軽圧での全身マッサージ</span>
+        
+        <p><strong>目的：</strong>パターンDの患者は、長期間の痛みにより全身が緊張しています。特に頸部・背部・対側肩の緊張が強い。まず全身をリラックスさせることで、患側肩の施術効果が高まります。</p>
+        
+        <h5>手順：</h5>
+        <ol>
+            <li><strong>頸部・後頭部（5分）：</strong>仰臥位で、後頭部と頸部を優しく軽擦・揉捏。圧は3-4/10</li>
+            <li><strong>背部全体（5分）：</strong>腹臥位または座位で、背中全体を軽擦。圧は3-4/10</li>
+            <li><strong>対側肩（5分）：</strong>健側の肩も代償的に過緊張していることが多い。軽擦・揉捏でほぐす</li>
+        </ol>
+    </div>
+
+    <h4><span class="step-number">3</span>患側肩の段階的アプローチ（40分）</h4>
+
+    <div class="warning-box">
+        <strong>圧の強さの厳守（最重要）</strong><br>
+        パターンDでは、どの組織も極度に硬化しています。「硬いから強く押す」は<strong>絶対に禁物</strong>です。強い圧は防御性筋収縮を引き起こし、翌日さらに硬くなります。<br><br>
+        <strong>圧の原則：</strong>すべての手技で<strong>5-6/10以下</strong>の軽〜中程度の圧。クライアントが「痛気持ちいい」を超えて「痛い」と感じたら即座に圧を弱めます。
+    </div>
+
+    <div class="tech-box">
+        <span class="tech-title"><span class="tag tag-softtissue">Phase 1</span> 表層筋の軽擦・揉捏（10分）</span>
+        
+        <h5>対象：</h5>
+        <ul>
+            <li>大胸筋・三角筋（前方・側方）：仰臥位、圧4-5/10</li>
+            <li>僧帽筋・広背筋（後方）：腹臥位または座位、圧4-5/10</li>
+        </ul>
+        
+        <p><strong>手技：</strong>軽擦→揉捏→軽擦の順。ゆったりとしたリズムで。</p>
+    </div>
+
+    <div class="tech-box">
+        <span class="tech-title"><span class="tag tag-softtissue">Phase 2</span> 中層筋のトリガーポイント軽圧（15分）</span>
+        
+        <h5>対象と手順：</h5>
+        <ol>
+            <li><strong>小胸筋（5分）：</strong>
+                <ul>
+                    <li>パターンAの手技を参照</li>
+                    <li>ただし圧は<strong>4-5/10まで</strong>に抑える</li>
+                    <li>持続時間も45-60秒に短縮</li>
+                </ul>
+            </li>
+            
+            <li><strong>棘下筋（5分）：</strong>
+                <ul>
+                    <li>パターンBの手技を参照</li>
+                    <li>圧は<strong>5-6/10まで</strong></li>
+                    <li>トリガーポイントは2-3箇所のみ</li>
+                </ul>
+            </li>
+            
+            <li><strong>肩甲下筋（5分）：</strong>
+                <ul>
+                    <li>パターンAの手技を参照</li>
+                    <li>ただし、パターンDでは非常に硬く、深く指が入らないことが多い</li>
+                    <li>無理に深部を狙わず、触診できる範囲で軽圧（5/10）</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <div class="tech-box">
+        <span class="tech-title"><span class="tag tag-softtissue">Phase 3</span> 腋窩陥凹部の最軽圧リリース（10分）</span>
+        
+        <h5>手順：</h5>
+        <ol>
+            <li>パターンCの手技を参照</li>
+            <li>ただし、パターンDでは癒着が非常に強固なため、1回の施術で剥離するのは困難</li>
+            <li><strong>目標：</strong>「少しずつ柔らかくする」こと。1回で5mm指が深く入れば成功</li>
+            <li>圧は<strong>4-5/10</strong>の軽圧</li>
+            <li>持続時間：各ポイント30-45秒</li>
+        </ol>
+    </div>
+
+    <div class="tech-box">
+        <span class="tech-title"><span class="tag tag-softtissue">Phase 4</span> 烏口上腕靭帯の軽度横断摩擦（5分）</span>
+        
+        <h5>手順：</h5>
+        <ol>
+            <li>パターンAの横断摩擦を参照</li>
+            <li>ただし圧は<strong>5-6/10</strong>に抑える（パターンAでは7-8/10だが、パターンDでは軽め）</li>
+            <li>持続時間：各ポイント20-30秒</li>
+        </ol>
+    </div>
+
+    <h4><span class="step-number">4</span>関節モビライゼーション（15分）</h4>
+
+    <div class="tech-box">
+        <span class="tech-title"><span class="tag tag-mobilization">Grade II</span> 全方向への軽度モビライゼーション</span>
+        
+        <p><strong>注意：</strong>パターンDではGrade III（強いモビライゼーション）は禁忌。Grade II（軽度の動き）のみ。</p>
+        
+        <h5>実施する方向：</h5>
+        <ol>
+            <li><strong>下方滑り（5分）：</strong>パターンCの手技。圧は5-6/10</li>
+            <li><strong>後方滑り（5分）：</strong>パターンAの手技。圧は5-6/10</li>
+            <li><strong>前方滑り（5分）：</strong>パターンBの手技。圧は5-6/10</li>
+        </ol>
+        
+        <p><strong>リズム：</strong>すべて「2秒圧迫 → 2秒リリース」のリズミカルな動き。強い持続圧は避ける。</p>
+    </div>
+
+    <h4><span class="step-number">5</span>アイシング（オプション・5分）</h4>
+    <p>施術後、炎症の兆候（熱感・腫脹・夜間痛の増強）がある場合はアイシング10分。炎症がない場合は、再度ホットパック5分で終了し、組織を温かい状態で保つ。</p>
+
+    <h3>🏠 ホームケア指導（パターンD専用）</h3>
+    
+    <div class="tech-box">
+        <span class="tech-title">パターンD専用ホームケアプログラム</span>
+        
+        <h5>1. 温熱療法（毎日2回、朝晩）</h5>
+        <p><strong>最重要：</strong>自宅でもできる限り肩を温めます。</p>
+        <ul>
+            <li>入浴時：シャワーで肩に温水を5-10分当てる</li>
+            <li>就寝前：ホットパック（市販の温熱シート、カイロ等）を肩全体に20分</li>
+            <li>注意：低温やけどに注意。必ず衣服の上から</li>
+        </ul>
+        
+        <h5>2. 超軽度のストレッチ（毎日3回）</h5>
+        <p><strong>原則：</strong>「痛みが出る手前まで」。決して無理をしない。</p>
+        <ul>
+            <li><strong>振り子運動（コッドマン体操）：</strong>重りは持たず、腕の重みだけで揺らす。前後・左右各30秒</li>
+            <li><strong>テーブルスライド：</strong>パターンCの手技。ただし無理に遠くまで滑らせない。現在の可動域の範囲内で</li>
+        </ul>
+        
+        <h5>3. 睡眠時のポジショニング（毎晩）</h5>
+        <p><strong>目的：</strong>夜間痛を軽減し、睡眠の質を確保。</p>
+        <ul>
+            <li><strong>仰向け：</strong>患側の肘の下にクッション。肩の高さより肘を高くする</li>
+            <li><strong>側臥位（患側が上）：</strong>大きな抱き枕を抱き、患側の腕を抱き枕の上に乗せる。腕が下に落ちないよう、体幹と水平以上の高さを保つ</li>
+            <li><strong>患側下寝は絶対に避ける</strong></li>
+        </ul>
+        
+        <h5>4. テニスボール・セルフリリース（毎日1-2回）</h5>
+        <ul>
+            <li>壁とのテニスボールを使い、烏口突起、棘下筋、小胸筋を軽圧（4-5/10）でセルフリリース</li>
+            <li>各ポイント30-60秒</li>
+        </ul>
+    </div>
+
+    <div class="contraindication">
+        <strong>⚠️ パターンD専用の禁忌事項</strong>
+        <ul style="margin-left: 20px; margin-top: 10px;">
+            <li><strong>絶対に強い手技を行わない：</strong>パターンDは「優しく、じっくり」が絶対原則</li>
+            <li><strong>糖尿病合併例では必ず内科医と連携：</strong>血糖コントロール不良のまま施術しても改善は困難</li>
+            <li><strong>3ヶ月施術しても全く改善がない場合：</strong>MRI検査を推奨。腱板断裂、石灰沈着、関節リウマチ等の鑑別が必要</li>
+            <li><strong>夜間痛が激烈で睡眠が全く取れない場合：</strong>整形外科でのステロイド関節内注射を検討</li>
+        </ul>
+    </div>
+
+    <h3>📊 改善の目安と長期計画（パターンD）</h3>
+    <table>
+        <tr>
+            <th>期間</th>
+            <th>施術頻度</th>
+            <th>期待される改善</th>
+        </tr>
+        <tr>
+            <td>1-4週目</td>
+            <td>週3回</td>
+            <td>夜間痛の軽減（VAS 8→6程度）。睡眠の質が少し改善</td>
+        </tr>
+        <tr>
+            <td>5-8週目</td>
+            <td>週2-3回</td>
+            <td>安静時痛がほぼ消失。可動域が5-10度改善し始める</td>
+        </tr>
+        <tr>
+            <td>9-16週目<br>(3-4ヶ月)</td>
+            <td>週2回</td>
+            <td>可動域が20-30度改善。日常生活動作が少し楽になる</td>
+        </tr>
+        <tr>
+            <td>17-24週目<br>(5-6ヶ月)</td>
+            <td>週1-2回</td>
+            <td>可動域が40-60度改善。多くの日常動作が可能に</td>
+        </tr>
+        <tr>
+            <td>6ヶ月以降</td>
+            <td>週1回<br>（メンテナンス）</td>
+            <td>可動域がほぼ正常に近づく。痛みはほぼ消失。完全回復まで9-12ヶ月</td>
+        </tr>
+    </table>
+
+    <div class="warning-box">
+        <strong>重要な注意：</strong>
+        <ul style="margin-top: 10px;">
+            <li>パターンDの完全回復には、<strong>最低6ヶ月、多くの場合9-12ヶ月</strong>かかります</li>
+            <li>糖尿病合併例では、さらに長期化（12-24ヶ月）することもあります</li>
+            <li>「1ヶ月で治る」等の過度な期待は持たせないこと。現実的な期間を説明し、長期戦を覚悟してもらうことが重要</li>
+            <li>ただし、適切な施術とホームケアを継続すれば、<strong>必ず改善します</strong>。諦めないことが最も重要</li>
+        </ul>
+    </div>
+
+    <h2>🎓 まとめ：4パターンの施術戦略</h2>
+    
+    <table>
+        <tr>
+            <th>パターン</th>
+            <th>最優先ターゲット</th>
+            <th>施術のコツ</th>
+            <th>改善期間の目安</th>
+        </tr>
+        <tr>
+            <td><strong>A<br>前方拘縮</strong></td>
+            <td>肩甲下筋<br>烏口上腕靭帯</td>
+            <td>深層へのアクセスが鍵。段階的に深める。横断摩擦が効果的。</td>
+            <td>2-3ヶ月</td>
+        </tr>
+        <tr>
+            <td><strong>B<br>後方拘縮</strong></td>
+            <td>後方関節包<br>棘下筋</td>
+            <td>Sleeper Stretchで肩甲骨固定が必須。GIRDの改善を目標に。</td>
+            <td>2-3ヶ月</td>
+        </tr>
+        <tr>
+            <td><strong>C<br>下方拘縮</strong></td>
+            <td>腋窩陥凹部<br>下方関節包</td>
+            <td>腋窩への慎重なアプローチ。下方滑りが効果的。恐怖回避行動の克服。</td>
+            <td>2-4ヶ月</td>
+        </tr>
+        <tr>
+            <td><strong>D<br>全方向拘縮</strong></td>
+            <td>関節包全体</td>
+            <td>「優しく、じっくり」が絶対原則。温熱療法を最重視。長期計画。</td>
+            <td>6-12ヶ月</td>
+        </tr>
+    </table>
+
+    <div style="margin-top: 50px; padding: 30px; background: #e3f2fd; border-radius: 8px;">
+        <h3 style="text-align: center; color: #0d47a1; margin-bottom: 20px;">施術者へのメッセージ</h3>
+        <p style="text-align: justify;">肩関節周囲炎は、施術者にとっても患者にとっても、根気と忍耐が求められる疾患です。特にパターンDでは、「早く治してあげたい」という気持ちから強い手技を行いがちですが、それは逆効果です。</p>
+        <p style="text-align: justify; margin-top: 15px;">「優しく、じっくり、継続的に」。この原則を守り、患者に寄り添い、長期的な視点で施術を行うことが、最も確実な改善への道です。</p>
+        <p style="text-align: justify; margin-top: 15px; font-weight: bold;">あなたの知識と技術が、多くの患者の人生の質を改善します。自信を持って、しかし謙虚に、施術に臨んでください。</p>
+    </div>
+
+    <div style="text-align: center; margin: 50px 0;">
+        <a href="frozen_shoulder_manual_part1.html" class="nav-link">← Part 1へ戻る</a>
+    </div>
+
+    <div style="margin-top: 50px; padding: 20px; background: #f5f5f5; border-radius: 5px; text-align: center;">
+        <p style="margin: 0; color: #666;">© 2024 肩関節周囲炎臨床マニュアル | 施術者専用資料</p>
+    </div>
+
+</div>
+</body>
+</html>

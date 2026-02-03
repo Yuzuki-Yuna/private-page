@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>肩関節周囲炎 4パターン特定診断シート &amp; 施術リファレンス</title>
+    <style>
+        @media print {
+            @page {
+                size: A4;
+                margin: 12mm;
+            }
+        }
+        
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+        
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', 'MS PGothic', sans-serif;
+            line-height: 1.5;
+            color: #333;
+            background: white;
+            padding: 8mm;
+            font-size: 9.5pt;
+        }
+        
+        .container {
+            max-width: 190mm;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        h1 {
+            font-size: 16pt;
+            border-bottom: 3px solid #00695c;
+            padding-bottom: 6px;
+            margin-bottom: 10px;
+            color: #004d40;
+            text-align: center;
+            page-break-after: avoid;
+        }
+        
+        h2 {
+            font-size: 13pt;
+            background: #00695c;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 3px;
+            margin: 15px 0 8px 0;
+            page-break-after: avoid;
+        }
+        
+        h3 {
+            font-size: 11pt;
+            border-left: 4px solid #d81b60;
+            padding-left: 8px;
+            margin: 12px 0 6px 0;
+            background: #fce4ec;
+            padding: 5px 8px;
+            color: #880e4f;
+            page-break-after: avoid;
+        }
+        
+        h4 {
+            font-size: 10pt;
+            color: #004d40;
+            margin: 10px 0 5px 0;
+            font-weight: bold;
+            page-break-after: avoid;
+        }
+        
+        p {
+            margin-bottom: 6px;
+        }
+        
+        ul, ol {
+            margin-left: 18px;
+            margin-bottom: 8px;
+        }
+        
+        li {
+            margin-bottom: 3px;
+            line-height: 1.4;
+        }
+        
+        strong {
+            color: #c62828;
+            font-weight: bold;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10px 0;
+            font-size: 8.5pt;
+            page-break-inside: avoid;
+        }
+        
+        th {
+            background: #546e7a;
+            color: white;
+            padding: 6px;
+            border: 1px solid #37474f;
+            font-weight: bold;
+            text-align: left;
+        }
+        
+        td {
+            border: 1px solid #cfd8dc;
+            padding: 6px;
+            vertical-align: top;
+            background: white;
+        }
+        
+        tr:nth-child(even) td {
+            background: #eceff1;
+        }
+        
+        .pattern-box {
+            border: 2px solid #00695c;
+            background: #e0f2f1;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            page-break-inside: avoid;
+        }
+        
+        .pattern-title {
+            font-weight: bold;
+            color: #00695c;
+            font-size: 10.5pt;
+            margin-bottom: 6px;
+            border-bottom: 2px solid #00897b;
+            padding-bottom: 3px;
+        }
+        
+        .severity-high {
+            background: #ffebee;
+            border-left: 5px solid #c62828;
+            padding: 8px;
+            margin: 8px 0;
+            font-weight: bold;
+            color: #c62828;
+        }
+        
+        .note-box {
+            background: #fff9c4;
+            border-left: 4px solid #fbc02d;
+            padding: 8px;
+            margin: 8px 0;
+            page-break-inside: avoid;
+        }
+        
+        .diagnostic-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 10px 0;
+        }
+        
+        .grid-item {
+            border: 1.5px solid #b2dfdb;
+            background: #e0f2f1;
+            padding: 8px;
+            border-radius: 3px;
+        }
+        
+        .grid-item-title {
+            font-weight: bold;
+            color: #00695c;
+            font-size: 9.5pt;
+            margin-bottom: 4px;
+        }
+        
+        .check-item {
+            padding-left: 15px;
+            position: relative;
+            margin: 3px 0;
+            font-size: 8.5pt;
+        }
+        
+        .check-item:before {
+            content: "□";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 2px 6px;
+            border-radius: 2px;
+            font-size: 7.5pt;
+            margin-right: 4px;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .tag-severe { background: #c62828; }
+        .tag-high { background: #f57c00; }
+        .tag-medium { background: #1976d2; }
+        
+        /* 印刷時の改ページ制御 */
+        @media print {
+            h1, h2, h3, h4 {
+                page-break-after: avoid;
+            }
+            
+            .pattern-box,
+            .note-box,
+            .severity-high,
+            table {
+                page-break-inside: avoid;
+            }
+        }
+        
+        .footer {
+            margin-top: 15px;
+            padding: 8px;
+            background: #f5f5f5;
+            border-radius: 3px;
+            text-align: center;
+            font-size: 8pt;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>肩関節周囲炎（Frozen Shoulder）<br>4パターン特定診断シート &amp; 施術リファレンス</h1>
+
+    <h2>1. 拘縮部位の特定（鑑別診断）</h2>
+    
+    <div class="diagnostic-grid">
+        <div class="grid-item">
+            <div class="grid-item-title">パターンA：前方拘縮優位型</div>
+            <strong>主訴：</strong>外旋制限・結髪困難
+            <div class="check-item">他動外旋 20度未満</div>
+            <div class="check-item">前肩姿勢（Rounded Shoulder）</div>
+            <div class="check-item">烏口上腕靭帯の肥厚触知</div>
+            <div class="check-item">肩前面痛（烏口突起周辺）</div>
+        </div>
+        
+        <div class="grid-item">
+            <div class="grid-item-title">パターンB：後方拘縮優位型</div>
+            <strong>主訴：</strong>内旋制限・結帯困難
+            <div class="check-item">他動内旋 40度未満</div>
+            <div class="check-item">GIRD陽性（健側との差20度以上）</div>
+            <div class="check-item">投球動作歴・横向き寝習慣</div>
+            <div class="check-item">肩後方痛・詰まり感</div>
+        </div>
+        
+        <div class="grid-item">
+            <div class="grid-item-title">パターンC：下方拘縮優位型</div>
+            <strong>主訴：</strong>挙上制限
+            <div class="check-item">挙上 90度未満</div>
+            <div class="check-item">腋窩陥凹部の平坦化・癒着</div>
+            <div class="check-item">三角巾固定歴・長期不動</div>
+            <div class="check-item">挙上時に肩峰下インピンジメント</div>
+        </div>
+        
+        <div class="grid-item">
+            <div class="grid-item-title">パターンD：全方向拘縮型（最重症）</div>
+            <strong>主訴：</strong>全方向制限
+            <div class="check-item">外旋10度未満・内旋30度未満・挙上60度未満</div>
+            <div class="check-item">糖尿病既往（HbA1c 7.0%以上）</div>
+            <div class="check-item">6ヶ月以上放置・激しい夜間痛</div>
+            <div class="check-item">日常生活動作ほぼ全て困難</div>
+        </div>
+    </div>
+
+    <div class="note-box">
+        <strong>診断の優先順位：</strong>
+        まず全方向の可動域を測定し、パターンDを除外。次に最も制限が強い方向を特定し、A/B/Cを判定。複数の方向が制限されている場合は、最も症状が強い部位を優先パターンとする。
+    </div>
+
+    <h2>2. 4パターン判定マトリックス &amp; 重症度</h2>
+    
+    <table>
+        <tr>
+            <th style="width: 15%;">パターン</th>
+            <th style="width: 20%;">主な拘縮部位</th>
+            <th style="width: 18%;">制限される動作</th>
+            <th style="width: 22%;">典型的な訴え</th>
+            <th style="width: 12%;">重症度</th>
+            <th style="width: 13%;">改善期間</th>
+        </tr>
+        <tr>
+            <td><strong>A<br>前方拘縮</strong></td>
+            <td>肩甲下筋<br>烏口上腕靭帯<br>小胸筋</td>
+            <td>外旋<br>結髪動作</td>
+            <td>「髪が結べない」<br>「シートベルトが取れない」</td>
+            <td><span class="tag tag-high">中〜高</span></td>
+            <td>2-3ヶ月</td>
+        </tr>
+        <tr>
+            <td><strong>B<br>後方拘縮</strong></td>
+            <td>後方関節包<br>棘下筋<br>小円筋</td>
+            <td>内旋<br>結帯動作</td>
+            <td>「後ろポケットに手が届かない」<br>「エプロンが結べない」</td>
+            <td><span class="tag tag-medium">中</span></td>
+            <td>2-3ヶ月</td>
+        </tr>
+        <tr>
+            <td><strong>C<br>下方拘縮</strong></td>
+            <td>下方関節包<br>腋窩陥凹部</td>
+            <td>挙上<br>外転</td>
+            <td>「腕が上がらない」<br>「電車のつり革に届かない」</td>
+            <td><span class="tag tag-high">中〜高</span></td>
+            <td>2-4ヶ月</td>
+        </tr>
+        <tr style="background: #ffebee !important;">
+            <td><strong>D<br>全方向拘縮</strong></td>
+            <td>全周性関節包<br>複合的拘縮</td>
+            <td>全方向<br>（外旋・内旋・挙上すべて）</td>
+            <td>「何もできない」<br>「着替えも大変」</td>
+            <td><span class="tag tag-severe">最重症</span></td>
+            <td>6-12ヶ月</td>
+        </tr>
+    </table>
+
+    <h2>3. 各パターンの筋肉状態 &amp; 施術優先部位</h2>
+    
+    <table>
+        <tr>
+            <th style="width: 10%;">パターン</th>
+            <th style="width: 35%;">筋肉・組織の状態（病態）</th>
+            <th style="width: 55%;">施術の優先順位とアプローチ</th>
+        </tr>
+        <tr>
+            <td><strong>A<br>前方拘縮</strong></td>
+            <td>
+                <strong>肩甲下筋：</strong>短縮・硬結（前傾姿勢による適応性短縮）<br>
+                <strong>烏口上腕靭帯：</strong>肥厚・線維化（持続的圧縮ストレス）<br>
+                <strong>小胸筋：</strong>トリガーポイント形成（巻き肩固定）
+            </td>
+            <td>
+                ① 小胸筋のトリガーポイント療法（虚血性圧迫 6-7/10、10分）<br>
+                ② 肩甲下筋のPNFストレッチ（ホールド・リラックス、12分）<br>
+                ③ 烏口上腕靭帯の横断摩擦マッサージ（7-8/10、15分）<br>
+                ④ 前方関節包の後方滑りモビライゼーション（Grade III、10分）
+            </td>
+        </tr>
+        <tr>
+            <td><strong>B<br>後方拘縮</strong></td>
+            <td>
+                <strong>棘下筋：</strong>深層トリガーポイント（収縮と伸張の繰り返し損傷）<br>
+                <strong>後方関節包：</strong>線維化・短縮（投球動作による伸張ストレス）<br>
+                <strong>小円筋：</strong>緊張・硬結
+            </td>
+            <td>
+                ① 棘下筋のトリガーポイント療法（虚血性圧迫 7-8/10、12分）<br>
+                ② 後方関節包のSleeper Stretch変法（肩甲骨固定必須、12分）<br>
+                ③ 小円筋の持続圧（6-7/10、8分）<br>
+                <strong>重要：</strong>肩甲骨を固定し、骨頭を後方に誘導しながらストレッチ
+            </td>
+        </tr>
+        <tr>
+            <td><strong>C<br>下方拘縮</strong></td>
+            <td>
+                <strong>腋窩陥凹部：</strong>癒着・充填（長期固定による短縮）<br>
+                <strong>下方関節包：</strong>短縮・硬化（廃用性拘縮）<br>
+                <strong>肩甲骨：</strong>過度の挙上・代償動作
+            </td>
+            <td>
+                ① 温熱療法（脇の下も含めて15分）<br>
+                ② 腋窩陥凹部の段階的癒着剥離（上腕骨頭方向へ、最大6/10、20分）<br>
+                ③ 下方関節包の下方滑りモビライゼーション（Grade III、12分）<br>
+                ④ 肩甲骨の下制・下方回旋モビライゼーション（8分）<br>
+                <strong>警告：</strong>腋窩には神経・血管あり。しびれ出現時は即中止
+            </td>
+        </tr>
+        <tr style="background: #ffebee !important;">
+            <td><strong>D<br>全方向<br>拘縮</strong></td>
+            <td>
+                <strong>全周性関節包：</strong>糖化最終生成物（AGEs）蓄積による硬化<br>
+                <strong>全筋肉：</strong>複合的短縮・トリガーポイント<br>
+                <strong>組織脆弱性：</strong>強圧で炎症再燃リスク
+            </td>
+            <td>
+                <strong>絶対原則：「優しく、じっくり、長期的に」</strong><br>
+                ① 温熱療法（20分、最重視）<br>
+                ② 全筋肉の軽圧リリース（4-6/10、30分）<br>
+                &nbsp;&nbsp;&nbsp;小胸筋・棘下筋・肩甲下筋・腋窩陥凹部・烏口上腕靭帯<br>
+                ③ 全方向への軽度モビライゼーション（Grade II のみ、15分）<br>
+                <strong>禁忌：</strong>Grade III以上の強いモビライゼーション、強圧（7/10以上）
+            </td>
+        </tr>
+    </table>
+
+    <div class="severity-high">
+        ★最重症パターンD の生活指導最優先事項：<br>
+        • 温熱療法を毎日自宅でも実施（入浴・ホットパック20分）<br>
+        • 糖尿病合併例は内科医と連携し血糖コントロール<br>
+        • 「6-12ヶ月かかる」ことを説明し、長期戦を覚悟してもらう<br>
+        • 施術頻度：最初の1ヶ月は週3回、その後週2回、6ヶ月以降は週1回
+    </div>
+
+    <h2>4. 主要ターゲット筋肉・組織への手技ポイント</h2>
+    
+    <table>
+        <tr>
+            <th style="width: 20%;">ターゲット</th>
+            <th style="width: 80%;">アプローチ方法と注意点</th>
+        </tr>
+        <tr>
+            <td><strong>肩甲下筋<br>(Subscapularis)</strong></td>
+            <td>
+                <strong>パターンA・Dの鍵。</strong>前方拘縮の主犯。深層筋のため段階的に圧を深める。<br>
+                <strong>手技：</strong>PNFホールド・リラックス法。等尺性収縮6秒→完全脱力→ストレッチ30秒を3-4回。<br>
+                <strong>圧：</strong>6-7/10（パターンDでは4-5/10）<br>
+                <strong>注意：</strong>強い外旋ストレッチは前方亜脱臼を誘発する可能性。痛みスケール5-6まで。
+            </td>
+        </tr>
+        <tr>
+            <td><strong>烏口上腕靭帯<br>(Coracohumeral<br>Ligament)</strong></td>
+            <td>
+                <strong>パターンA・Dの鍵。</strong>肥厚・線維化により外旋を物理的に制限。<br>
+                <strong>手技：</strong>横断摩擦マッサージ。靭帯の走行に垂直方向に母指で小刻みに摩擦。<br>
+                <strong>圧：</strong>7-8/10（パターンDでは5-6/10）<br>
+                <strong>位置：</strong>烏口突起から外側2-3cm、太いコード状の索状物。<br>
+                <strong>注意：</strong>非常に痛い手技。事前説明と同意必須。1箇所30-45秒。
+            </td>
+        </tr>
+        <tr>
+            <td><strong>棘下筋<br>(Infraspinatus)</strong></td>
+            <td>
+                <strong>パターンB・Dの鍵。</strong>深層トリガーポイントが多発。<br>
+                <strong>手技：</strong>虚血性圧迫法。硬結に母指または肘で持続圧60-90秒。<br>
+                <strong>圧：</strong>7-8/10（パターンDでは5-6/10）<br>
+                <strong>位置：</strong>肩甲棘直下、棘下筋窩中央、肩甲骨外側縁の3箇所が典型的。<br>
+                <strong>体位：</strong>腹臥位、患側の腕を背中に回す（内旋位）。
+            </td>
+        </tr>
+        <tr>
+            <td><strong>小胸筋<br>(Pectoralis Minor)</strong></td>
+            <td>
+                <strong>パターンA・Dの鍵。</strong>大胸筋の深層。巻き肩の原因筋。<br>
+                <strong>手技：</strong>虚血性圧迫法。烏口突起の下2-3cmを後内側斜め（肋骨方向）へ圧迫。<br>
+                <strong>圧：</strong>6-7/10（パターンDでは4-5/10）<br>
+                <strong>注意：</strong>浅い圧では効果なし。ただし肋骨を直接押すと痛いため筋腹を狙う。<br>
+                <strong>体位：</strong>仰臥位、患側の腕を外転45度。
+            </td>
+        </tr>
+        <tr>
+            <td><strong>腋窩陥凹部<br>(Axillary Recess)</strong></td>
+            <td>
+                <strong>パターンC・Dの鍵。</strong>癒着により挙上を物理的に制限。<br>
+                <strong>手技：</strong>段階的癒着剥離。母指で上腕骨頭方向へゆっくり侵入。<br>
+                <strong>圧：</strong>最大6/10（パターンDでは4-5/10）<br>
+                <strong>安全ルール：</strong>圧の方向は必ず上腕骨頭向き。内側・下方への圧は神経損傷リスク。<br>
+                <strong>禁忌サイン：</strong>しびれ・ビリビリ感が出たら即中止。
+            </td>
+        </tr>
+        <tr>
+            <td><strong>後方関節包<br>(Posterior Capsule)</strong></td>
+            <td>
+                <strong>パターンB・Dの鍵。</strong>線維化により内旋を制限。<br>
+                <strong>手技：</strong>Sleeper Stretch with Scapular Stabilization。肩甲骨固定が絶対条件。<br>
+                <strong>体位：</strong>側臥位（患側が下）。肩甲骨外側縁を固定し、骨頭を後方誘導しながら内旋。<br>
+                <strong>時間：</strong>30秒保持 × 3-4回。<br>
+                <strong>注意：</strong>肩甲骨が前方に逃げると効果なし。
+            </td>
+        </tr>
+        <tr>
+            <td><strong>下方関節包<br>(Inferior Capsule)</strong></td>
+            <td>
+                <strong>パターンC・Dの鍵。</strong>短縮により挙上時に骨頭が下方へ滑れない。<br>
+                <strong>手技：</strong>下方滑りモビライゼーション（Inferior Glide）。<br>
+                <strong>体位：</strong>座位、患側の腕を外転90度。肩甲骨固定し、上腕骨頭を真下へ押し下げる。<br>
+                <strong>圧：</strong>6-7/10（パターンDでは5-6/10）<br>
+                <strong>リズム：</strong>3秒圧迫→2秒リリース × 15-20回。
+            </td>
+        </tr>
+    </table>
+
+    <h2>5. 禁忌事項 &amp; 医療機関紹介基準</h2>
+    
+    <div class="severity-high">
+        <strong>即座に施術を中止し、医療機関へ紹介すべき状態：</strong><br>
+        • 夜間痛が激しく、睡眠が全く取れない（炎症期の可能性）<br>
+        • 安静時にも激痛がある<br>
+        • 腕全体にしびれ・脱力がある（神経障害の可能性）<br>
+        • 肩の外観に明らかな変形・腫脹がある<br>
+        • 発熱を伴う肩痛（感染性関節炎の可能性）<br>
+        • 施術後に症状が著しく悪化した<br>
+        • パターンD で3ヶ月施術しても全く改善がない（MRI検査推奨）
+    </div>
+
+    <div class="note-box">
+        <strong>施術者への重要メッセージ：</strong><br>
+        肩関節周囲炎は「優しく、じっくり、継続的に」が鉄則です。特にパターンDでは、「早く治してあげたい」という気持ちから強い手技を行いがちですが、それは逆効果。組織が脆弱なため、強圧は炎症を再燃させ、拘縮を悪化させます。患者に寄り添い、長期的な視点で施術を行うことが、最も確実な改善への道です。
+    </div>
+
+    <div class="footer">
+        © 2024 肩関節周囲炎 4パターン診断シート &amp; 施術リファレンス | 施術者専用資料
+    </div>
+
+</div>
+</body>
+</html>
