@@ -33,8 +33,7 @@
         
         h1 {
             color: #333;
-            margin-top: 0;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
         
         p {
@@ -43,26 +42,21 @@
             margin-bottom: 10px;
         }
         
-        /* パスワード入力フォーム */
-        .password-form {
-            margin-top: 30px;
-        }
-        
-        .password-form input {
+        input[type="password"] {
             width: 100%;
             padding: 12px;
-            margin: 10px 0;
+            margin: 15px 0;
             border: 2px solid #ddd;
             border-radius: 5px;
             font-size: 16px;
         }
         
-        .password-form input:focus {
+        input[type="password"]:focus {
             outline: none;
             border-color: #667eea;
         }
         
-        .password-form button {
+        button {
             background: #667eea;
             color: white;
             padding: 12px 30px;
@@ -70,17 +64,29 @@
             border-radius: 5px;
             font-size: 16px;
             cursor: pointer;
-            margin-top: 10px;
             transition: background 0.3s;
+            width: 100%;
+            margin-top: 10px;
         }
         
-        .password-form button:hover {
+        button:hover {
             background: #5568d3;
+        }
+        
+        button.logout-btn {
+            background: #e74c3c;
+            width: auto;
+            margin-top: 30px;
+        }
+        
+        button.logout-btn:hover {
+            background: #c0392b;
         }
         
         .error {
             color: #e74c3c;
             margin-top: 10px;
+            display: none;
             font-weight: bold;
         }
         
@@ -88,7 +94,6 @@
             display: none !important;
         }
         
-        /* コンテンツセクション */
         .content-section {
             text-align: left;
         }
@@ -132,37 +137,24 @@
             color: rgba(255, 255, 255, 0.9);
             font-size: 14px;
             margin-top: 5px;
-        }
-        
-        .logout-btn {
-            background: #e74c3c;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 30px;
-            transition: background 0.3s;
-        }
-        
-        .logout-btn:hover {
-            background: #c0392b;
+            margin-bottom: 0;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- パスワード入力フォーム -->
-        <div id="passwordSection" class="password-form">
+        <!-- ========== パスワード入力セクション ========== -->
+        <div id="passwordSection">
             <h1>🔐 プライベートページ</h1>
+            <p style="color: #667eea; font-weight: bold; font-size: 16px; margin-bottom: 20px;">Created by K.Ryu</p>
             <p>このページはパスワード保護されています。</p>
             <p>パスワードを入力してアクセスしてください。</p>
-            <input type="password" id="passwordInput" placeholder="パスワードを入力" />
-            <button onclick="checkPassword()">アクセス</button>
-            <div id="errorMessage" class="error hidden"></div>
+            <input type="password" id="passwordInput" placeholder="パスワードを入力">
+            <button type="button" id="submitBtn">アクセス</button>
+            <div class="error" id="errorMessage"></div>
         </div>
         
-        <!-- コンテンツセクション（認証後） -->
+        <!-- ========== コンテンツセクション ========== -->
         <div id="contentSection" class="hidden content-section">
             <h1>🔐 プライベートページへようこそ</h1>
             <p>以下のコンテンツにアクセスできます。</p>
@@ -170,93 +162,97 @@
             <h2>📚 マッサージガイド</h2>
             <div class="links-container">
                 <div class="link-card">
-                    <a href="massage0.html" target="_blank">
-                        📖 Massage 0
-                    </a>
+                    <a href="massage0.html" target="_blank">📖 Massage 0</a>
                     <p>マッサージガイド - 基本編</p>
                 </div>
                 
                 <div class="link-card">
-                    <a href="massage1-4.html" target="_blank">
-                        📖 Massage 1-4
-                    </a>
+                    <a href="massage1-4.html" target="_blank">📖 Massage 1-4</a>
                     <p>マッサージガイド - レッスン1〜4</p>
                 </div>
                 
                 <div class="link-card">
-                    <a href="massage5-8.html" target="_blank">
-                        📖 Massage 5-8
-                    </a>
+                    <a href="massage5-8.html" target="_blank">📖 Massage 5-8</a>
                     <p>マッサージガイド - レッスン5〜8</p>
                 </div>
                 
                 <div class="link-card">
-                    <a href="massage9-12.html" target="_blank">
-                        📖 Massage 9-12
-                    </a>
+                    <a href="massage9-12.html" target="_blank">📖 Massage 9-12</a>
                     <p>マッサージガイド - レッスン9〜12</p>
                 </div>
                 
                 <div class="link-card">
-                    <a href="massge13-16.html" target="_blank">
-                        📖 Massage 13-16
-                    </a>
+                    <a href="massge13-16.html" target="_blank">📖 Massage 13-16</a>
                     <p>マッサージガイド - レッスン13〜16</p>
                 </div>
             </div>
             
-            <button class="logout-btn" onclick="logout()">ログアウト</button>
+            <button type="button" class="logout-btn" id="logoutBtn">ログアウト</button>
         </div>
     </div>
-    
+
     <script>
-        // パスワード設定
-        const CORRECT_PASSWORD = "369";
-        
-        // ページ読み込み時にセッションを確認
-        window.onload = function() {
-            if (sessionStorage.getItem('authenticated') === 'true') {
+        const PASSWORD = "369";
+        const passwordInput = document.getElementById("passwordInput");
+        const submitBtn = document.getElementById("submitBtn");
+        const passwordSection = document.getElementById("passwordSection");
+        const contentSection = document.getElementById("contentSection");
+        const errorMessage = document.getElementById("errorMessage");
+        const logoutBtn = document.getElementById("logoutBtn");
+
+        // ページ読み込み時の処理
+        window.addEventListener("load", function() {
+            if (sessionStorage.getItem("authenticated") === "true") {
                 showContent();
             }
-        };
-        
-        // パスワードチェック
+        });
+
+        // アクセスボタンクリック
+        submitBtn.addEventListener("click", function() {
+            checkPassword();
+        });
+
+        // Enterキー押下
+        passwordInput.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                checkPassword();
+            }
+        });
+
+        // ログアウトボタンクリック
+        logoutBtn.addEventListener("click", function() {
+            logout();
+        });
+
+        // パスワード確認
         function checkPassword() {
-            const password = document.getElementById('passwordInput').value;
+            const inputValue = passwordInput.value;
             
-            if (password === CORRECT_PASSWORD) {
-                sessionStorage.setItem('authenticated', 'true');
+            if (inputValue === PASSWORD) {
+                sessionStorage.setItem("authenticated", "true");
                 showContent();
             } else {
-                document.getElementById('errorMessage').textContent = 'パスワードが正しくありません。';
-                document.getElementById('errorMessage').classList.remove('hidden');
-                document.getElementById('passwordInput').value = '';
+                errorMessage.textContent = "パスワードが正しくありません。";
+                errorMessage.style.display = "block";
+                passwordInput.value = "";
+                passwordInput.focus();
             }
         }
-        
-        // Enterキーで送信
-        document.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('passwordInput').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    checkPassword();
-                }
-            });
-        });
-        
-        // コンテンツを表示
+
+        // コンテンツ表示
         function showContent() {
-            document.getElementById('passwordSection').classList.add('hidden');
-            document.getElementById('contentSection').classList.remove('hidden');
+            passwordSection.classList.add("hidden");
+            contentSection.classList.remove("hidden");
         }
-        
+
         // ログアウト
         function logout() {
-            sessionStorage.removeItem('authenticated');
-            document.getElementById('passwordSection').classList.remove('hidden');
-            document.getElementById('contentSection').classList.add('hidden');
-            document.getElementById('passwordInput').value = '';
-            document.getElementById('errorMessage').classList.add('hidden');
-            document.getElementById('passwordInput').focus();
+            sessionStorage.removeItem("authenticated");
+            passwordSection.classList.remove("hidden");
+            contentSection.classList.add("hidden");
+            passwordInput.value = "";
+            errorMessage.style.display = "none";
+            passwordInput.focus();
         }
     </script>
 </body>
