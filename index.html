@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>プライベートページ</title>
     <style>
-        body {
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 20px;
         }
         
         .container {
@@ -22,31 +27,23 @@
             border-radius: 10px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             text-align: center;
-            max-width: 500px;
-            width: 90%;
+            max-width: 600px;
+            width: 100%;
         }
         
         h1 {
             color: #333;
             margin-top: 0;
+            margin-bottom: 10px;
         }
         
         p {
             color: #666;
             line-height: 1.6;
+            margin-bottom: 10px;
         }
         
-        .content {
-            margin-top: 30px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 5px;
-        }
-        
-        .content h2 {
-            color: #667eea;
-        }
-        
+        /* パスワード入力フォーム */
         .password-form {
             margin-top: 30px;
         }
@@ -58,7 +55,6 @@
             border: 2px solid #ddd;
             border-radius: 5px;
             font-size: 16px;
-            box-sizing: border-box;
         }
         
         .password-form input:focus {
@@ -75,6 +71,7 @@
             font-size: 16px;
             cursor: pointer;
             margin-top: 10px;
+            transition: background 0.3s;
         }
         
         .password-form button:hover {
@@ -84,10 +81,72 @@
         .error {
             color: #e74c3c;
             margin-top: 10px;
+            font-weight: bold;
         }
         
         .hidden {
-            display: none;
+            display: none !important;
+        }
+        
+        /* コンテンツセクション */
+        .content-section {
+            text-align: left;
+        }
+        
+        .content-section h2 {
+            color: #333;
+            margin: 20px 0 15px 0;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .links-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .link-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .link-card a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .link-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        
+        .logout-btn {
+            background: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: background 0.3s;
+        }
+        
+        .logout-btn:hover {
+            background: #c0392b;
         }
     </style>
 </head>
@@ -103,25 +162,50 @@
             <div id="errorMessage" class="error hidden"></div>
         </div>
         
-        <!-- コンテンツ（認証後） -->
-        <div id="contentSection" class="hidden">
+        <!-- コンテンツセクション（認証後） -->
+        <div id="contentSection" class="hidden content-section">
             <h1>🔐 プライベートページへようこそ</h1>
-            <p>このページはパスワード保護されています。</p>
+            <p>以下のコンテンツにアクセスできます。</p>
             
-            <div class="content">
-                <h2>ページが表示されていますね！</h2>
-                <p>このページが見えているということは、パスワード認証に成功しました。</p>
-                <p>ここにはあなたの大切な情報や、限定公開したいコンテンツを入れることができます。</p>
+            <h2>📚 マッサージガイド</h2>
+            <div class="links-container">
+                <div class="link-card">
+                    <a href="massage0.html" target="_blank">
+                        📖 Massage 0
+                    </a>
+                    <p>マッサージガイド - 基本編</p>
+                </div>
                 
-                <hr>
+                <div class="link-card">
+                    <a href="massage1-4.html" target="_blank">
+                        📖 Massage 1-4
+                    </a>
+                    <p>マッサージガイド - レッスン1〜4</p>
+                </div>
                 
-                <p><strong>このページの内容を編集する方法：</strong></p>
-                <p>このHTMLファイルを編集して、好きなコンテンツに変更してください。</p>
+                <div class="link-card">
+                    <a href="massage5-8.html" target="_blank">
+                        📖 Massage 5-8
+                    </a>
+                    <p>マッサージガイド - レッスン5〜8</p>
+                </div>
                 
-                <hr>
+                <div class="link-card">
+                    <a href="massage9-12.html" target="_blank">
+                        📖 Massage 9-12
+                    </a>
+                    <p>マッサージガイド - レッスン9〜12</p>
+                </div>
                 
-                <button onclick="logout()" style="background: #e74c3c; padding: 10px 20px; color: white; border: none; border-radius: 5px; cursor: pointer; margin-top: 20px;">ログアウト</button>
+                <div class="link-card">
+                    <a href="massge13-16.html" target="_blank">
+                        📖 Massage 13-16
+                    </a>
+                    <p>マッサージガイド - レッスン13〜16</p>
+                </div>
             </div>
+            
+            <button class="logout-btn" onclick="logout()">ログアウト</button>
         </div>
     </div>
     
@@ -172,6 +256,7 @@
             document.getElementById('contentSection').classList.add('hidden');
             document.getElementById('passwordInput').value = '';
             document.getElementById('errorMessage').classList.add('hidden');
+            document.getElementById('passwordInput').focus();
         }
     </script>
 </body>
