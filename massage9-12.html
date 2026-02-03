@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>施術者向けマニュアル【パターン9-12詳細版】</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #00838f;
+            color: #00838f;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #00838f;
+            color: white;
+            border-radius: 5px;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #e0f7fa;
+            border-left: 5px solid #00838f;
+        }
+
+        h4 {
+            font-size: 1.1em;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: #00695c;
+        }
+
+        p {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            line-height: 1.7;
+        }
+
+        .pattern-section {
+            margin-bottom: 50px;
+        }
+
+        .severity-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+
+        .severity-critical {
+            background: #d32f2f;
+            color: white;
+        }
+
+        .severity-high {
+            background: #f44336;
+            color: white;
+        }
+
+        .severity-relief {
+            background: #4caf50;
+            color: white;
+        }
+
+        .severity-corrective {
+            background: #2196f3;
+            color: white;
+        }
+
+        .info-box {
+            background: #fff9c4;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #fbc02d;
+            border-radius: 3px;
+        }
+
+        .warning-box {
+            background: #ffebee;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #d32f2f;
+            border-radius: 3px;
+        }
+
+        .tip-box {
+            background: #e0f2f1;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #00897b;
+            border-radius: 3px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        table th {
+            background: #00838f;
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        table tr:nth-child(even) {
+            background: #f5f5f5;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: #00838f;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        @media print {
+            body { padding: 0; font-size: 11pt; color: #000; background: none; }
+            .pattern-section { page-break-after: always; }
+            table, .info-box, .warning-box, .tip-box, li { page-break-inside: avoid; }
+            h1, h2, h3, h4 { page-break-after: avoid; }
+            @page { margin: 15mm; }
+        }
+    </style>
+</head>
+<body>
+    <h1>🔧 施術者向け 16パターン完全マニュアル【パターン9-12詳細版】</h1>
+    <p style="font-size: 1.1em; margin-bottom: 30px;">
+        <strong>TYPE C：ラテラル右（右潰れ型）</strong><br>
+        特徴：右肘つき・右足重心などによる「右半身の圧縮」× 睡眠姿勢による分析
+    </p>
+
+    <!-- パターン9: ラテラル右 × 右下寝（最重症） -->
+    <div class="pattern-section">
+        <h2>パターン09：ラテラル右 × 右下寝<span class="severity-badge severity-critical">重症度：最高</span></h2>
+        <p><strong>症状：</strong>右半身全体：極度の短縮・圧迫 / 左半身：伸張</p>
+
+        <div class="warning-box">
+            <p style="font-weight: bold; font-size: 1.1em;">⚠️ 危険な「アコーディオン潰れ」状態</p>
+            <p>日中に潰れている右側を、夜間も体重で押し潰しています。右側の肋骨と骨盤がくっつくほど短縮しており、<strong>呼吸が浅く、肝機能の低下</strong>も見られる最重症パターンです。</p>
+        </div>
+
+        <h3>🔬 なぜ最重症なのか（病態生理学的説明）</h3>
+        
+        <h4>【日中の姿勢メカニズム（右側屈）】</h4>
+        <p>デスクワークで右肘をつく、常に右肩で鞄を持つ、立ち姿勢で右足に体重を乗せるなどの癖により、背骨が右にカーブ（右側屈）します。これにより、<strong>右側の肋骨と骨盤の距離が縮まり</strong>、右腰方形筋、右肋間筋、右広背筋が短縮します。</p>
+        
+        <h4>【夜間の睡眠メカニズム（圧迫固定）】</h4>
+        <p>さらに右側を下にして寝ることで、体重が右半身にかかります。日中「縮こまっている」筋肉が、夜間は「上からプレス」される状態です。<br>
+        この<strong>「短縮 × 圧迫」の24時間継続</strong>により、右側の筋肉は完全に血流を失い（虚血状態）、岩のような硬結を形成します。右肺が膨らまないため、呼吸機能も低下します。</p>
+
+        <h3>🎯 医学的にどの筋肉がどうなっているか</h3>
+
+        <table>
+            <tr>
+                <th>筋肉名</th>
+                <th>解剖学的位置</th>
+                <th>このパターンでの状態</th>
+                <th>触診所見</th>
+            </tr>
+            <tr style="background: #ffebee;">
+                <td><strong>右腰方形筋<br>(最重症エリア)</strong></td>
+                <td>第12肋骨〜腸骨稜</td>
+                <td><strong style="color: #d32f2f;">肋骨と骨盤が癒着したかのように短縮。</strong>可動性ゼロ。</td>
+                <td>• 指が入らないほど硬い<br>• 第12肋骨と腸骨稜の間隔が極端に狭い<br>• 軽く押すだけで激痛（過敏）</td>
+            </tr>
+            <tr>
+                <td><strong>右肋間筋<br>(呼吸筋)</strong></td>
+                <td>肋骨の間</td>
+                <td>常に縮んでいるため、肋骨の間隔が狭まり、固着している。</td>
+                <td>• 肋骨の隙間が指で探れない<br>• 深呼吸をしても右胸が広がらない</td>
+            </tr>
+            <tr>
+                <td><strong>右肩甲挙筋</strong></td>
+                <td>頸椎〜肩甲骨上角</td>
+                <td>右肩がすくんだ状態で固定され、常に緊張。</td>
+                <td>• 首の右付け根に強いしこり<br>• 右への首回旋制限</td>
+            </tr>
+        </table>
+
+        <h3>🖐️ 具体的な施術方法（ステップバイステップ）</h3>
+
+        <h4>【施術の流れ】推奨施術時間：80-90分</h4>
+        <div class="info-box">
+            <strong>施術方針：</strong>「潰れたアコーディオンを広げる」ことが最大のミッションです。ただし、患部（右）を上にした側臥位で、いきなりストレッチをかけると激痛が走ります。まずは皮膚と筋膜を剥がすことから始めます。
+        </div>
+
+        <h4>【ステップ1】皮膚・筋膜の「あそび」を作る（15分）</h4>
+        
+        <div class="info-box">
+            <strong>📍 クライアントの体位：側臥位（左側を下）</strong><br>
+            患部である「右側」を上にします。右脇腹にクッション（タオルケット等）を挟み、右側を少し広げた状態を作ると効果的です。
+        </div>
+
+        <ol>
+            <li>
+                <span class="step-number">1</span><strong>スキンローリング（整膚）（10分）</strong>
+                <p>右腰〜右脇腹の皮膚を優しくつまみ上げます。筋肉と皮膚が癒着してパンパンになっているため、まずは皮膚をつまんで引っ張り、隙間を作ります。</p>
+                <ul>
+                    <li><strong>注意：</strong>非常に痛がりやすいため、「つねる」のではなく「持ち上げる」イメージで。</li>
+                </ul>
+            </li>
+            <li>
+                <span class="step-number">2</span><strong>肋骨のモビリゼーション（5分）</strong>
+                <p>手のひらを右肋骨に当て、呼吸に合わせて優しく揺らします。「肋骨を動かす」意識で。固まった鳥かごをほぐすイメージ。</p>
+            </li>
+        </ol>
+
+        <h4>【ステップ2】右腰方形筋・広背筋の分離リリース（25分）</h4>
+
+        <ol>
+            <li>
+                <span class="step-number">1</span><strong>広背筋の剥離（10分）</strong>
+                <p>右脇腹の表面にある広背筋を、背骨側からお腹側へ向かってしごくようにマッサージ。深層の腰方形筋へのアクセスルートを作ります。</p>
+            </li>
+            <li>
+                <span class="step-number">2</span><strong>腰方形筋へのアプローチ（15分）</strong>
+                <p>第12肋骨と腸骨稜の間に母指を入れますが、狭すぎて入らないことが多いです。</p>
+                <ul>
+                    <li><strong>テクニック：</strong>無理に指を入れず、骨盤（腸骨稜）の縁に沿って圧をかけ、「骨盤を下（足方向）に押し下げる」ようにしてスペースを広げます。</li>
+                    <li><strong>ストレッチ併用：</strong>施術者がクライアントの骨盤を足元へ押し下げながら、クライアントに右手を頭上に伸ばしてもらいます。</li>
+                </ul>
+            </li>
+        </ol>
+
+        <h4>【ステップ3】右肋間筋・胸郭の拡張（15分）</h4>
+        <p>クライアントに左手を枕にしてもらい、右腕を大きく回してもらいます。その動きに合わせて、施術者が右肋骨の間（肋間筋）に指を当て、広げるようにサポートします。<br><strong>目的：</strong>呼吸機能を回復させ、酸素を取り込める体にする。</p>
+
+        <h4>【ステップ4】頸部の調整（10分）</h4>
+        <p>右肩がすくんで首が短くなっています。右肩甲骨を押し下げながら、首の筋肉（斜角筋・肩甲挙筋）をストレッチします。</p>
+
+        <h3>💡 施術者へのアドバイス</h3>
+        <ul>
+            <li><strong>「痛み」に敏感です：</strong>このパターンは神経過敏になっていることが多いため、強押しは厳禁。「広げる」「伸ばす」感覚を重視してください。</li>
+            <li><strong>睡眠指導：</strong>「右下寝」は傷口に塩を塗る行為です。抱き枕を使って「左側を下」にして寝るよう、強く指導してください。それだけで右側がストレッチされます。</li>
+        </ul>
+    </div>
+
+    <!-- パターン10: ラテラル右 × 左下寝（矯正パターン） -->
+    <div class="pattern-section">
+        <h2>パターン10：ラテラル右 × 左下寝<span class="severity-badge severity-corrective">緩和傾向（矯正効果）</span></h2>
+        <p><strong>症状：</strong>右腰：伸張（治療的ストレッチ） / 左腰：圧迫</p>
+
+        <div class="tip-box">
+            <p style="font-weight: bold; font-size: 1.1em;">✅ 天然のストレッチ効果</p>
+            <p>日中に縮んだ右側が、夜間に左下寝をすることで上になり、重力で自然に引き伸ばされます。この睡眠姿勢は症状改善に役立っています。</p>
+        </div>
+
+        <h3>🔬 メカニズムと筋肉の状態</h3>
+        <p>日中は右側屈（右潰れ）していますが、夜間は右側が上になり、天井側になります。重力により右骨盤が下がり、右肋骨との距離が開くため、<strong>寝ている間にストレッチが行われている状態</strong>です。</p>
+        <p>ただし、右側があまりに硬い場合、この「引き伸ばされ」が痛み（伸張痛）として感じられることがあります。</p>
+
+        <table>
+            <tr>
+                <th>筋肉名</th>
+                <th>状態</th>
+                <th>施術の狙い</th>
+            </tr>
+            <tr>
+                <td><strong>右腰方形筋</strong></td>
+                <td>日中短縮→夜間伸張。<br>回復傾向にある。</td>
+                <td>伸張をさらに助けるリリース。<br>「伸ばすと気持ちいい」状態を作る。</td>
+            </tr>
+            <tr>
+                <td><strong>左側（下側）</strong></td>
+                <td>夜間に体重がかかり圧迫される。</td>
+                <td>圧迫による血流不全のケア。<br>左中殿筋などの保護。</td>
+            </tr>
+        </table>
+
+        <h3>🖐️ 具体的な施術方法（ステップバイステップ）</h3>
+        
+        <h4>【施術の流れ】推奨施術時間：50-60分</h4>
+        <div class="info-box">
+            <strong>施術方針：</strong>右側の「開き」をさらに良くするためのストレッチ系マッサージと、下敷きになっている左側のケアをバランスよく行います。
+        </div>
+
+        <h4>【ステップ1】左側（下側）のケア（15分）</h4>
+        <p>右側臥位（右を下）になってもらい、普段下敷きになっている左側をケアします。特に左中殿筋、左大転子周りの圧迫を取り除きます。</p>
+
+        <h4>【ステップ2】右側（患部）のストレッチリリース（25分）</h4>
+        <div class="info-box">
+            <strong>📍 クライアントの体位：左側臥位（左を下）</strong>
+        </div>
+        <ol>
+            <li>
+                <span class="step-number">1</span><strong>右脇腹の伸張（10分）</strong>
+                <p>右腕を頭上に伸ばしてもらい、施術者が右骨盤を足元方向へ引きます（牽引）。同時に右腰方形筋をオイル等で流します。</p>
+            </li>
+            <li>
+                <span class="step-number">2</span><strong>ダイナミックストレッチ（15分）</strong>
+                <p>施術者がクライアントの背後に立ち、骨盤と肩甲骨を持って、互いに離すようにストレッチします。「もっと開く」感覚を体に覚えさせます。</p>
+            </li>
+        </ol>
+
+        <h4>【ステップ3】仕上げ（10分）</h4>
+        <p>座位での側屈ストレッチを行い、右側が伸びやすくなっていることを確認してもらいます。</p>
+
+        <h3>💡 クライアントへのアドバイス</h3>
+        <ul>
+            <li><strong>「その寝方で正解です」：</strong>左下寝が右側の縮みを治してくれていることを伝え、継続を推奨します。</li>
+            <li><strong>右脇腹を伸ばす習慣：</strong>日中も、トイレに立った際などに右手を挙げて脇腹を伸ばすようアドバイスします。</li>
+        </ul>
+    </div>
+
+    <!-- パターン11: ラテラル右 × 仰向け（リセット） -->
+    <div class="pattern-section">
+        <h2>パターン11：ラテラル右 × 仰向け<span class="severity-badge severity-relief">リセット姿勢</span></h2>
+        <p><strong>症状：</strong>バランス良好（軽度の右短縮残存）</p>
+
+        <div class="tip-box">
+            <p style="font-weight: bold; font-size: 1.1em;">✅ 理想的なリセット</p>
+            <p>日中の右潰れ癖を、夜間の仰向け（ニュートラル）でリセットできています。重症化を防ぐ防波堤となっています。</p>
+        </div>
+
+        <h3>🔬 施術のポイント</h3>
+        <p>大きな問題はありませんが、日中の癖（ラテラル右）が強いため、仰向けで寝ていても<strong>無意識に体が右に「くの字」に曲がっている</strong>ことがあります。</p>
+
+        <h4>【施術の流れ】推奨施術時間：40-50分</h4>
+        <ol>
+            <li>
+                <span class="step-number">1</span><strong>アライメントチェック（5分）</strong>
+                <p>仰向けに寝かせた状態で、足の長さや、へその位置を確認します。右足が短く見えたり、骨盤が右に上がっている場合、右腰方形筋の短縮が残っています。</p>
+            </li>
+            <li>
+                <span class="step-number">2</span><strong>右側の牽引（15分）</strong>
+                <p>仰向けのまま、右足を軽く牽引（引っ張る）し、右腰の詰まりを取ります。そのまま足を左右に揺らし、脱力を促します。</p>
+            </li>
+            <li>
+                <span class="step-number">3</span><strong>全身調整（20分）</strong>
+                <p>リラクゼーション中心の施術で、全身のバランスを整えます。</p>
+            </li>
+        </ol>
+    </div>
+
+    <!-- パターン12: ラテラル右 × うつ伏せ -->
+    <div class="pattern-section">
+        <h2>パターン12：ラテラル右 × うつ伏せ<span class="severity-badge severity-high">重症度：高</span></h2>
+        <p><strong>症状：</strong>右腰：短縮＋過緊張 / 首：回旋ストレス</p>
+
+        <h3>🔬 なぜこのパターンで症状が出るのか</h3>
+        
+        <h4>【複合的な歪み（バナナ型変形）】</h4>
+        <p>日中の「右側屈（右潰れ）」に加え、夜間のうつ伏せによる「腰椎伸展（反り腰）」が合わさります。さらに、うつ伏せで寝る際、楽な方（右側屈しているなら、顔は右に向けやすい傾向）に首を捻ります。</p>
+        <p>結果、体は<strong>「右に曲がって、反って、ねじれる」という複雑な歪み（ツイストバナナ状態）</strong>になります。</p>
+
+        <h3>🎯 医学的にどの筋肉がどうなっているか</h3>
+
+        <table>
+            <tr>
+                <th>筋肉名</th>
+                <th>状態</th>
+                <th>触診所見</th>
+            </tr>
+            <tr>
+                <td><strong>右腰方形筋</strong></td>
+                <td>右側屈（縮み）＋伸展（反り）。<br><strong style="color: #d32f2f;">最も負担がかかる部位。</strong></td>
+                <td>• 強い圧痛<br>• 奥の方でカチカチに固まっている</td>
+            </tr>
+            <tr style="background: #fff3e0;">
+                <td><strong>右腸腰筋</strong></td>
+                <td>うつ伏せ（反り）と右側屈により、短縮位で固定。</td>
+                <td>• 鼠径部（右コマネチライン）の強い緊張<br>• 右股関節の伸展制限</td>
+            </tr>
+            <tr>
+                <td><strong>胸鎖乳突筋</strong></td>
+                <td>首の回旋により、左右差が激しい。</td>
+                <td>• 片側だけ筋腹が太く硬くなっている<br>• 寝違え頻発の原因</td>
+            </tr>
+        </table>
+
+        <h3>🖐️ 具体的な施術方法（ステップバイステップ）</h3>
+
+        <h4>【施術の流れ】推奨施術時間：70-80分</h4>
+        <div class="info-box">
+            <strong>施術方針：</strong>「右腰のつまり」と「反り腰（腸腰筋）」の両方にアプローチする必要があります。うつ伏せ施術は腰に負担がかかるため、お腹枕が必須です。
+        </div>
+
+        <h4>【ステップ1】右腸腰筋リリース（重要・15分）</h4>
+        <div class="warning-box">
+            <strong>⚠️ 注意：</strong>腹部施術のため、力加減は慎重に。
+        </div>
+        <ol>
+            <li>
+                <span class="step-number">1</span><strong>仰臥位でのアプローチ</strong>
+                <p>膝を立て、右ASIS（腰骨）の内側から、深層の腸腰筋にアプローチします。</p>
+            </li>
+            <li>
+                <span class="step-number">2</span><strong>3方向のベクトル</strong>
+                <p>単に押すだけでなく、「反りを戻す」「右の縮みを伸ばす」イメージで、優しく持続圧を加えます。</p>
+            </li>
+        </ol>
+
+        <h4>【ステップ2】右腰方形筋の伸張リリース（25分）</h4>
+        <p>左側臥位（左下）になってもらい、右腰を施術します。</p>
+        <ul>
+            <li><strong>手技：</strong>右足をベッドの後ろ側に落としてもらい（重力利用）、右腰が伸びる体勢を作ってから、肘や母指でリリースします。</li>
+            <li><strong>目的：</strong>「反り」と「側屈」を同時に解除するポジションです。</li>
+        </ul>
+
+        <h4>【ステップ3】首・肩甲骨の調整（15分）</h4>
+        <p>うつ伏せ寝による首の捻れを解消します。仰向けでホットタオルで首を温めながら、胸鎖乳突筋と板状筋を丁寧にほぐします。</p>
+
+        <h4>【ステップ4】うつ伏せ矯正指導（施術中会話）</h4>
+        <p>「この腰の痛みは、うつ伏せ寝をやめない限り繰り返します」と説明し、抱き枕を使った横向き寝（特に左下）を提案します。</p>
+
+        <h3>🚫 禁忌事項</h3>
+        <ul>
+            <li><strong>うつ伏せでの強押し：</strong>既に反っている腰を、上から強く押すと腰椎を痛めます。必ずお腹に枕を入れるか、横向きで施術してください。</li>
+        </ul>
+    </div>
+
+</body>
+</html>

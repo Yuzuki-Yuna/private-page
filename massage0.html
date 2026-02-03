@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【事前診断】16パターン特定フローチャート</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Sans', 'Yu Gothic', 'Meiryo', sans-serif;
+            line-height: 1.8;
+            color: #333;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #00838f;
+            color: #00838f;
+        }
+
+        h2 {
+            font-size: 1.6em;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #00838f;
+            color: white;
+            border-radius: 5px;
+        }
+
+        h3 {
+            font-size: 1.3em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #e0f7fa;
+            border-left: 5px solid #00838f;
+        }
+
+        p {
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        ul {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* 診断用カードスタイル */
+        .diagnosis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .diagnosis-card {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #fafafa;
+        }
+
+        .diagnosis-card:hover {
+            border-color: #00838f;
+            background: #e0f7fa;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-header {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #00695c;
+            border-bottom: 2px solid #b2dfdb;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .symptom-highlight {
+            font-weight: bold;
+            color: #d32f2f;
+            font-size: 1.1em;
+            text-align: center;
+            display: block;
+            margin: 10px 0;
+            background: #fff;
+            padding: 5px;
+            border-radius: 4px;
+        }
+
+        .check-list {
+            font-size: 0.9em;
+            color: #555;
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .check-list li::before {
+            content: "☑";
+            color: #00838f;
+            margin-right: 5px;
+        }
+
+        /* 判定テーブル */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+
+        table th {
+            background: #004d40;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #00695c;
+        }
+
+        table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .pattern-cell {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #00838f;
+        }
+
+        .risk-critical {
+            background: #ffebee;
+            color: #d32f2f;
+            border: 2px solid #d32f2f;
+        }
+
+        .risk-high {
+            background: #fff3e0;
+            color: #e65100;
+        }
+
+        .risk-safe {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            background: #00838f;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 1.1em;
+        }
+
+        .warning-box {
+            background: #ffebee;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #d32f2f;
+            border-radius: 3px;
+        }
+
+        .tip-box {
+            background: #e0f2f1;
+            padding: 15px;
+            margin: 15px 0;
+            border-left: 5px solid #00897b;
+            border-radius: 3px;
+        }
+
+        @media print {
+            .diagnosis-card {
+                page-break-inside: avoid;
+            }
+            h2 {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 施術前事前診断：16パターン特定フローチャート</h1>
+    <p>クライアントの症状と生活習慣から、該当する「パターン番号」を特定するためのスクリーニング・マニュアルです。施術前のカウンセリングでご活用ください。</p>
+
+    <!-- STEP 1 -->
+    <div class="pattern-section">
+        <h2><span class="step-number">1</span>症状分布の確認（日中の姿勢特定）</h2>
+        <p>クライアントに<strong>「一番つらい場所」</strong>を2箇所挙げてもらい、その組み合わせから日中の姿勢タイプを特定します。</p>
+        
+        <div class="tip-box">
+            <strong>🗣️ 問診トーク例：</strong><br>
+            「上半身と下半身で、それぞれ一番つらい場所を1つずつ指差していただけますか？」<br>
+            「右肩と左腰、のように対角線上に痛みがありますか？それとも片側に寄っていますか？」
+        </div>
+
+        <div class="diagnosis-grid">
+            <!-- TYPE A -->
+            <div class="diagnosis-card">
+                <div class="card-header">TYPE A：クロス右<br>（雑巾絞り型）</div>
+                <span class="symptom-highlight">右肩 × 左腰</span>
+                <p style="font-size:0.9em; text-align:center; margin-bottom:10px;">ねじれストレス</p>
+                <ul class="check-list">
+                    <li>右脚を上にして組む癖がある</li>
+                    <li>車の運転が多い（右ハンドル）</li>
+                    <li>左の骨盤が下がっている感覚</li>
+                    <li>右肩が前に巻いている</li>
+                </ul>
+            </div>
+
+            <!-- TYPE B -->
+            <div class="diagnosis-card">
+                <div class="card-header">TYPE B：クロス左<br>（雑巾絞り型・逆）</div>
+                <span class="symptom-highlight">左肩 × 右腰</span>
+                <p style="font-size:0.9em; text-align:center; margin-bottom:10px;">ねじれストレス</p>
+                <ul class="check-list">
+                    <li>左脚を上にして組む癖がある</li>
+                    <li>PC画面がデスクの右側にある</li>
+                    <li>右の骨盤が下がっている感覚</li>
+                    <li>左肩が前に巻いている</li>
+                </ul>
+            </div>
+
+            <!-- TYPE C -->
+            <div class="diagnosis-card">
+                <div class="card-header">TYPE C：ラテラル右<br>（右潰れ・アコーディオン型）</div>
+                <span class="symptom-highlight">右肩 × 右腰</span>
+                <p style="font-size:0.9em; text-align:center; margin-bottom:10px;">片側圧縮ストレス</p>
+                <ul class="check-list">
+                    <li>右肘をつく癖がある</li>
+                    <li>常に右肩で鞄を持つ</li>
+                    <li>立っている時、右足重心</li>
+                    <li>身体全体が右に傾いている</li>
+                </ul>
+            </div>
+
+            <!-- TYPE D -->
+            <div class="diagnosis-card">
+                <div class="card-header">TYPE D：ラテラル左<br>（左潰れ・アコーディオン型）</div>
+                <span class="symptom-highlight">左肩 × 左腰</span>
+                <p style="font-size:0.9em; text-align:center; margin-bottom:10px;">片側圧縮ストレス</p>
+                <ul class="check-list">
+                    <li>左肘をつく癖がある（車のドア等）</li>
+                    <li>常に左肩で鞄を持つ</li>
+                    <li>立っている時、左足重心</li>
+                    <li>身体全体が左に傾いている</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="pattern-section">
+        <h2><span class="step-number">2</span>睡眠姿勢の確認</h2>
+        <p>「入眠時（寝入り端）」の姿勢を確認します。朝起きた時の姿勢ではなく、<strong>布団に入って最初に落ち着く姿勢</strong>を聞いてください。</p>
+
+        <div class="diagnosis-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="diagnosis-card" style="text-align: center;">
+                <div class="card-header" style="border:none; margin:0;">① 右下寝</div>
+                <p style="font-size:0.8em; color:#666;">右半身が下</p>
+            </div>
+            <div class="diagnosis-card" style="text-align: center;">
+                <div class="card-header" style="border:none; margin:0;">② 左下寝</div>
+                <p style="font-size:0.8em; color:#666;">左半身が下</p>
+            </div>
+            <div class="diagnosis-card" style="text-align: center;">
+                <div class="card-header" style="border:none; margin:0;">③ 仰向け</div>
+                <p style="font-size:0.8em; color:#666;">天井を見る</p>
+            </div>
+            <div class="diagnosis-card" style="text-align: center;">
+                <div class="card-header" style="border:none; margin:0;">④ うつ伏せ</div>
+                <p style="font-size:0.8em; color:#666;">顔を横に向ける</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="pattern-section">
+        <h2><span class="step-number">3</span>16パターン確定マトリックス</h2>
+        <p>STEP1（縦軸）とSTEP2（横軸）の交点が、クライアントの該当パターンです。</p>
+        <p>※ <span style="color:#d32f2f; font-weight:bold;">★ 赤枠</span> は最重症パターン（ダブルクラッシュ）です。初回カウンセリングで生活指導が必須です。</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th style="width: 20%;">日中のタイプ<br>↓</th>
+                    <th style="width: 20%;">① 右下寝</th>
+                    <th style="width: 20%;">② 左下寝</th>
+                    <th style="width: 20%;">③ 仰向け<br><span style="font-size:0.8em; font-weight:normal;">(理想・予防)</span></th>
+                    <th style="width: 20%;">④ うつ伏せ<br><span style="font-size:0.8em; font-weight:normal;">(反り腰・首捻転)</span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- TYPE A -->
+                <tr>
+                    <th style="background:#00695c; text-align:left;">
+                        <strong>TYPE A</strong><br>クロス右<br>
+                        <span style="font-size:0.8em; font-weight:normal; color:#b2dfdb;">(右肩×左腰)</span>
+                    </th>
+                    <td class="risk-high">
+                        <span class="pattern-cell">No.01</span><br>
+                        重症度：高
+                    </td>
+                    <td class="risk-critical">
+                        <span class="pattern-cell">No.02 ★</span><br>
+                        <strong>最重症</strong><br>
+                        <span style="font-size:0.8em;">左腰逃げ場なし</span>
+                    </td>
+                    <td class="risk-safe">
+                        <span class="pattern-cell">No.03</span><br>
+                        リセット
+                    </td>
+                    <td class="risk-high">
+                        <span class="pattern-cell">No.04</span><br>
+                        重症度：高
+                    </td>
+                </tr>
+                <!-- TYPE B -->
+                <tr>
+                    <th style="background:#00695c; text-align:left;">
+                        <strong>TYPE B</strong><br>クロス左<br>
+                        <span style="font-size:0.8em; font-weight:normal; color:#b2dfdb;">(左肩×右腰)</span>
+                    </th>
+                    <td class="risk-critical">
+                        <span class="pattern-cell">No.06 ★</span><br>
+                        <strong>最重症</strong><br>
+                        <span style="font-size:0.8em;">右腰逃げ場なし</span>
+                    </td>
+                    <td class="risk-high">
+                        <span class="pattern-cell">No.05</span><br>
+                        重症度：高
+                    </td>
+                    <td class="risk-safe">
+                        <span class="pattern-cell">No.07</span><br>
+                        リセット
+                    </td>
+                    <td class="risk-high">
+                        <span class="pattern-cell">No.08</span><br>
+                        重症度：高
+                    </td>
+                </tr>
+                <!-- TYPE C -->
+                <tr>
+                    <th style="background:#004d40; text-align:left;">
+                        <strong>TYPE C</strong><br>ラテラル右<br>
+                        <span style="font-size:0.8em; font-weight:normal; color:#b2dfdb;">(右肩×右腰)</span>
+                    </th>
+                    <td class="risk-critical">
+                        <span class="pattern-cell">No.09 ★</span><br>
+                        <strong>最重症</strong><br>
+                        <span style="font-size:0.8em;">右半身全滅</span>
+                    </td>
+                    <td class="risk-safe" style="background:#e3f2fd; color:#0d47a1;">
+                        <span class="pattern-cell">No.10</span><br>
+                        緩和傾向<br>
+                        <span style="font-size:0.8em;">(矯正効果あり)</span>
+                    </td>
+                    <td class="risk-safe">
+                        <span class="pattern-cell">No.11</span><br>
+                        リセット
+                    </td>
+                    <td class="risk-high">
+                        <span class="pattern-cell">No.12</span><br>
+                        重症度：高
+                    </td>
+                </tr>
+                <!-- TYPE D -->
+                <tr>
+                    <th style="background:#004d40; text-align:left;">
+                        <strong>TYPE D</strong><br>ラテラル左<br>
+                        <span style="font-size:0.8em; font-weight:normal; color:#b2dfdb;">(左肩×左腰)</span>
+                    </th>
+                    <td class="risk-safe" style="background:#e3f2fd; color:#0d47a1;">
+                        <span class="pattern-cell">No.14</span><br>
+                        緩和傾向<br>
+                        <span style="font-size:0.8em;">(矯正効果あり)</span>
+                    </td>
+                    <td class="risk-critical">
+                        <span class="pattern-cell">No.13 ★</span><br>
+                        <strong>最重症</strong><br>
+                        <span style="font-size:0.8em;">左半身全滅</span>
+                    </td>
+                    <td class="risk-safe">
+                        <span class="pattern-cell">No.15</span><br>
+                        リセット
+                    </td>
+                    <td class="risk-high">
+                        <span class="pattern-cell">No.16</span><br>
+                        重症度：高
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 診断後のアクション -->
+    <div class="pattern-section">
+        <h2><span class="step-number">4</span>診断後のアクション指針</h2>
+        
+        <div class="warning-box">
+            <strong>⚠️ ★最重症パターン（No.02, 06, 09, 13）の場合</strong>
+            <p>日中に負担をかけている筋肉を、夜間も圧迫し続けています。「24時間休息なし」の状態であることを伝え、睡眠姿勢の変更（仰向け推奨）と抱き枕の使用を強く提案してください。</p>
+        </div>
+
+        <div class="info-box">
+            <strong>📋 施術方針の決定</strong>
+            <ul>
+                <li><strong>TYPE A・B（クロス型）の場合：</strong> 背骨を中心とした「回旋（ねじれ）」を取る手技をメインにします。<br>→ <u>広背筋、脊柱起立筋の対角線ストレッチ</u></li>
+                <li><strong>TYPE C・D（ラテラル型）の場合：</strong> 体側を中心とした「側屈（ちぢみ）」を取る手技をメインにします。<br>→ <u>腰方形筋、中殿筋、脇腹のリリース</u></li>
+                <li><strong>うつ伏せ寝（No.04, 08, 12, 16）の場合：</strong> 「腸腰筋」の短縮と「首」の回旋ストレスケアが必須項目となります。</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>
