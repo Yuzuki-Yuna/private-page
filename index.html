@@ -113,11 +113,14 @@
         }
         
         .link-card {
+            display: block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
             border-radius: 8px;
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
+            color: white;
+            text-decoration: none;
         }
         
         .link-card:hover {
@@ -125,19 +128,17 @@
             box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
         }
         
-        .link-card a {
-            color: white;
-            text-decoration: none;
-            display: block;
+        .link-card .link-title {
             font-size: 18px;
             font-weight: bold;
+            color: white;
+            margin-bottom: 5px;
         }
         
-        .link-card p {
+        .link-card .link-description {
             color: rgba(255, 255, 255, 0.9);
             font-size: 14px;
-            margin-top: 5px;
-            margin-bottom: 0;
+            margin: 0;
         }
     </style>
 </head>
@@ -161,30 +162,30 @@
             
             <h2>📚 マッサージガイド</h2>
             <div class="links-container">
-                <div class="link-card">
-                    <a href="massage0.html" target="_blank">📖 Massage 0</a>
-                    <p>マッサージガイド - 基本編</p>
-                </div>
+                <a href="massage0.html" target="_blank" class="link-card">
+                    <div class="link-title">📖 Massage 0</div>
+                    <div class="link-description">マッサージガイド - 基本編</div>
+                </a>
                 
-                <div class="link-card">
-                    <a href="massage1-4.html" target="_blank">📖 Massage 1-4</a>
-                    <p>マッサージガイド - レッスン1〜4</p>
-                </div>
+                <a href="massage1-4.html" target="_blank" class="link-card">
+                    <div class="link-title">📖 Massage 1-4</div>
+                    <div class="link-description">マッサージガイド - レッスン1〜4</div>
+                </a>
                 
-                <div class="link-card">
-                    <a href="massage5-8.html" target="_blank">📖 Massage 5-8</a>
-                    <p>マッサージガイド - レッスン5〜8</p>
-                </div>
+                <a href="massage5-8.html" target="_blank" class="link-card">
+                    <div class="link-title">📖 Massage 5-8</div>
+                    <div class="link-description">マッサージガイド - レッスン5〜8</div>
+                </a>
                 
-                <div class="link-card">
-                    <a href="massage9-12.html" target="_blank">📖 Massage 9-12</a>
-                    <p>マッサージガイド - レッスン9〜12</p>
-                </div>
+                <a href="massage9-12.html" target="_blank" class="link-card">
+                    <div class="link-title">📖 Massage 9-12</div>
+                    <div class="link-description">マッサージガイド - レッスン9〜12</div>
+                </a>
                 
-                <div class="link-card">
-                    <a href="massge13-16.html" target="_blank">📖 Massage 13-16</a>
-                    <p>マッサージガイド - レッスン13〜16</p>
-                </div>
+                <a href="massge13-16.html" target="_blank" class="link-card">
+                    <div class="link-title">📖 Massage 13-16</div>
+                    <div class="link-description">マッサージガイド - レッスン13〜16</div>
+                </a>
             </div>
             
             <button type="button" class="logout-btn" id="logoutBtn">ログアウト</button>
